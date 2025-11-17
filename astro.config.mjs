@@ -3,10 +3,11 @@ import vercel from '@astrojs/vercel';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-
+import vercelServerless from '@astrojs/vercel/serverless';
 // https://astro.build/config
 export default defineConfig({
-  adapter: vercel(),
+  output: 'server',
+  adapter: vercelServerless(),
   site: 'https://www.askingfranklin.com',
   base: '/',
   integrations: [
