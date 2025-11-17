@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { LegalPage } from '@/pages/_LegalPage';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'en';
+const content = getContent(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={content.privacyPolicy.meta.title}
+  metaDescription={content.privacyPolicy.meta.description}
+  currentPath="/privacy-policy"
+>
+  <LegalPage lang={lang} content={content} type="privacyPolicy" client:load />
+</BaseLayout>

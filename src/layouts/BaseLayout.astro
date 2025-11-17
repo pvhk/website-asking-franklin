@@ -1,0 +1,115 @@
+---
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { Toaster } from '@/components/ui/toaster';
+import { getContent, getAlternateUrl, type Language } from '@/lib/i18n';
+import type { SiteContent } from '@/content/types';
+import '@/index.css';
+import {
+  buildWebSiteSchema,
+  buildOrganizationSchema,
+  buildWebPageSchema,
+  buildFAQPageSchema,
+  buildProductSchema,
+} from '@/lib/schemaBuilder';
+
+interface Props {
+  lang: Language;
+  metaTitle: string;
+  metaDescription: string;
+  currentPath: string;
+  faqData?: Array<{ question: string; answer: string }>;
+  productsData?: Array<{
+    name: string;
+    description: string;
+    price: string;
+  }>;
+}
+
+const { lang, metaTitle, metaDescription, currentPath, faqData, productsData } = Astro.props;
+const content: SiteContent = getContent(lang);
+
+const baseUrl = 'https://www.askingfranklin.com';
+const canonicalUrl = `${baseUrl}${currentPath}`;
+
+// Build schema.org structured data
+const webSiteSchema = buildWebSiteSchema();
+const organizationSchema = buildOrganizationSchema();
+const webPageSchema = buildWebPageSchema(canonicalUrl, metaTitle, metaDescription, lang);
+
+let faqSchema = null;
+if (faqData && faqData.length > 0) {
+  faqSchema = buildFAQPageSchema(faqData);
+}
+
+const productSchemas: any[] = [];
+if (productsData && productsData.length > 0) {
+  productsData.forEach((product) => {
+    productSchemas.push(buildProductSchema(product.name, product.description, product.price));
+  });
+}
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <meta name="author" content="Asking Franklin" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hrefLang="en" href={`${baseUrl}${getAlternateUrl(currentPath, 'en')}`} />
+    <link rel="alternate" hrefLang="fr" href={`${baseUrl}${getAlternateUrl(currentPath, 'fr')}`} />
+    <link rel="alternate" hrefLang="x-default" href={`${baseUrl}${getAlternateUrl(currentPath, 'en')}`} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={lang === 'fr' ? 'fr_FR' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'fr' ? 'en_US' : 'fr_FR'} />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:title" content={metaTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <!-- Structured Data - WebSite + Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify(webSiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+
+    <!-- Structured Data - WebPage -->
+    <script type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+
+    <!-- Structured Data - FAQPage -->
+    {faqSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    )}
+
+    <!-- Structured Data - Products -->
+    {productSchemas.map((productSchema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+    ))}
+  </head>
+  <body>
+    <div class="flex min-h-screen flex-col">
+      <Header lang={lang} content={content} client:load />
+      <main class="flex-1">
+        <slot />
+      </main>
+      <Footer content={content} client:load />
+    </div>
+    <Toaster client:load />
+  </body>
+</html>

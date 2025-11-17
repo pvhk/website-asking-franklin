@@ -1,0 +1,18 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Home } from '@/pages/_Home';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'fr';
+const content = getContent(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={content.home.meta.title}
+  metaDescription={content.home.meta.description}
+  currentPath="/fr"
+  faqData={content.home.faq.items}
+>
+  <Home lang={lang} content={content} client:load />
+</BaseLayout>
