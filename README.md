@@ -1,6 +1,6 @@
-## Astro + Vercel (with Brevo newsletter)
+## Astro + Vercel
 
-Minimal Astro site configured for Vercel. A single API route handles newsletter subscriptions via Brevo.
+Minimal Astro site configured for Vercel.
 
 ### Prerequisites
 - Node.js 18+
