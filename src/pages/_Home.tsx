@@ -24,6 +24,7 @@ import logoUrgo from '@/assets/logos/urgo.png';
 import blogTop10Techniques from '@/assets/blog/top-10-techniques-redaction-web.jpg';
 import blog3Secrets from '@/assets/blog/3-secrets-excellent-redacteur.jpg';
 import blog3Etapes from '@/assets/blog/3-etapes-contenu-engage.jpg';
+import step0Image from '@/assets/Step0-Keywords-opportunities.webp';
 import step1Image from '@/assets/step1-keyword.webp';
 import step2Image from '@/assets/step2-serp.webp';
 import step3Image from '@/assets/step3-plan.webp';
@@ -204,7 +205,7 @@ export const Home = ({
         {/* Steps with Images */}
         <div className="space-y-24 mt-24">
           {content.home.howItWorks.steps.map((step, index) => {
-          const stepImages = [step1Image, step2Image, step3Image, step4Image];
+          const stepImages = [step0Image, step1Image, step2Image, step3Image, step4Image];
           const isEven = index % 2 === 0;
           return <div key={index} className={`grid gap-12 lg:grid-cols-2 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}>
                 <div className={`${!isEven ? 'lg:order-2' : ''} space-y-6`}>
@@ -219,12 +220,14 @@ export const Home = ({
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
-                  <Button variant="outline" className="group" asChild>
-                    <a href="https://app.askingfranklin.com/register" target="_blank" rel="noopener noreferrer">
-                      {step.cta}
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </a>
-                  </Button>
+                  {step.cta && (
+                    <Button variant="outline" className="group" asChild>
+                      <a href={step.ctaUrl || "https://app.askingfranklin.com/register"} target="_blank" rel="noopener noreferrer">
+                        {step.cta}
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
                 
                 <div className={`${!isEven ? 'lg:order-1' : ''}`}>

@@ -1,5 +1,6 @@
 ---
 import { Header } from "@/components/Header";
+import { Banner } from "@/components/Banner";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { getContent, getAlternateUrl, type Language } from "@/lib/i18n";
@@ -168,6 +169,7 @@ if (productsData && productsData.length > 0) {
     >
     <div class="flex min-h-screen flex-col">
       <Header lang={lang} content={content} client:load />
+      <Banner lang={lang} client:load />
       <main class="flex-1">
         <slot />
       </main>

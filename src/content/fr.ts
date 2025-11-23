@@ -114,6 +114,14 @@ export const frContent: SiteContent = {
       steps: [
         {
           number: '1',
+          title: "Découvrez de nouvelles opportunités pour ranker",
+          description: 'Votre assistant IA suggère automatiquement les meilleurs mots-clés pour lesquels votre site web devrait être indexé. En fonction de votre site, de vos concurrents et de vos objectifs.',
+          image: 'Step0-Keywords-opportunities',
+          cta: 'Découvrez vos opportunités',
+          ctaUrl: 'https://app.askingfranklin.com/register',
+        },
+        {
+          number: '2',
           title: "Tapez le mot-clé que vous avez choisi",
           description: 'Asking Franklin ira chercher toutes les questions, les recherches et sujets connexes en relation avec ce dernier. Incontournable pour optimiser votre création de contenu, de produits et de services en vous basant sur ce que veulent vos clients.',
           image: 'step1-keyword',
@@ -121,19 +129,19 @@ export const frContent: SiteContent = {
           ctaUrl: 'https://app.askingfranklin.com/register',
         },
         {
-          number: '2',
+          number: '3',
           title: 'Asking Franklin analyse le top de la SERP',
           description: 'Rien de tel que des concurrents mieux positionnés sur le mot-clé choisi pour déterminer des opportunités seo et s\'en saisir pour rédiger des contenus qui convertissent ! Franklin, votre assistant IA de rédaction s\'en charge pour vous.',
           image: 'step2-serp',
         },
         {
-          number: '3',
+          number: '4',
           title: 'Asking Franklin vous rédige un plan d\'article SEO optimisé',
           description: 'Basé vraiment sur l\'analyse de l\'intention de recherche puis des meilleurs contenus du top de la Serp, Asking Franklin vous rédige un plan d\'article complet et détaillé. Ce même plan est basé sur l\'analyse des résultats de recherche, des formats et de la sémantique des contenus positionnés. L\'IA identifie ensuite des opportunités sous-exploitées pour produire un plan optimisé.',
           image: 'step3-plan',
         },
         {
-          number: '4',
+          number: '5',
           title: 'Asking Franklin génère votre article optimisé SEO et GEO',
           description: 'A partir du plan d\'article, Franklin rédige automatiquement vos contenus en prenant en compte vos retours et les optimisations nécessaires pour se positionner. Vous préférez rédiger vous-même certaines parties, rajouter des sources, développer certains paragraphes ? Demandez le à Franklin.',
           image: 'step4-article',
@@ -346,6 +354,10 @@ export const frContent: SiteContent = {
       {
         title: '11. Dispositions Finales',
         content: 'L\'acceptation des présentes CGV est obligatoire pour accéder aux Services.\nAsking Franklin peut mettre à jour les CGV à tout moment ; la version en vigueur est celle publiée sur le site au moment de l\'utilisation.'
+      },
+      {
+        title: '12. Offre Black Friday',
+        content: 'L\'offre du Black Friday est valable jusqu\'au 30/11. L\'offre vous permet de bénéficier de 50% de réduction sur le 1er mois de votre abonnement mensuel. Ou bien de 50% sur votre abonnement annuel (payable en 1 fois).'
       }
     ]
   },
