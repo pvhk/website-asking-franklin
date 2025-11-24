@@ -114,6 +114,14 @@ export const enContent: SiteContent = {
       steps: [
         {
           number: '1',
+          title: 'Discover new opportunities to rank',
+          description: 'Your AI assistant automatically suggests the best keywords for which your website should be indexed. Based on your website, competitors and your objectives.',
+          image: 'Step0-Keywords-opportunities',
+          cta: 'Discover your opportunities',
+          ctaUrl: 'https://app.askingfranklin.com/register',
+        },
+        {
+          number: '2',
           title: 'Type in the keyword you have chosen',
           description: 'Asking Franklin will search for all questions, searches and related topics in relation to it. Essential to optimize your content, product and service creation based on what your customers want.',
           image: 'step1-keyword',
@@ -121,19 +129,19 @@ export const enContent: SiteContent = {
           ctaUrl: 'https://app.askingfranklin.com/register',
         },
         {
-          number: '2',
+          number: '3',
           title: 'Asking Franklin analyzes the top of the SERP',
           description: 'Nothing like competitors better positioned on the chosen keyword to determine SEO opportunities and seize them to write content that converts! Franklin, your AI writing assistant, takes care of it for you.',
           image: 'step2-serp',
         },
         {
-          number: '3',
+          number: '4',
           title: 'Asking Franklin writes you an optimized SEO article plan',
           description: 'Based on the analysis of search intent and the best content at the top of the SERP, Asking Franklin writes you a complete and detailed article plan. This plan is based on the analysis of search results, formats and semantics of positioned content. The AI then identifies underexploited opportunities to produce an optimized plan.',
           image: 'step3-plan',
         },
         {
-          number: '4',
+          number: '5',
           title: 'Asking Franklin generates your SEO and GEO optimized article',
           description: 'From the article plan, Franklin automatically writes your content taking into account your feedback and the optimizations necessary to rank. Do you prefer to write certain parts yourself, add sources, develop certain paragraphs? Ask Franklin.',
           image: 'step4-article',
@@ -346,6 +354,10 @@ export const enContent: SiteContent = {
       {
         title: '11. Final Provisions',
         content: 'Acceptance of these ToS is mandatory to access the Services.\nAsking Franklin may update the ToS at any time; the version in force is the one published on the site at the time of use.'
+      },
+      {
+        title: '12. Black Friday offer',
+        content: 'The Black Friday offer is valid until November 30. The offer gives you a 50% discount on the first month of your monthly subscription. Or 50% off your annual subscription (payable in one go).'
       }
     ]
   },
