@@ -25,10 +25,10 @@ import blogTop10Techniques from '@/assets/blog/top-10-techniques-redaction-web.j
 import blog3Secrets from '@/assets/blog/3-secrets-excellent-redacteur.jpg';
 import blog3Etapes from '@/assets/blog/3-etapes-contenu-engage.jpg';
 import step0Image from '@/assets/Step0-Keywords-opportunities.webp';
-import step1Image from '@/assets/step1-keyword.webp';
+import step1Image from '@/assets/step1-keyword.png';
 import step2Image from '@/assets/step2-serp.webp';
-import step3Image from '@/assets/step3-plan.webp';
-import step4Image from '@/assets/step4-article.webp';
+import step3Image from '@/assets/step3-plan.png';
+import step4Image from '@/assets/step4-article.png';
 interface HomeProps {
   lang: Language;
   content: SiteContent;
@@ -231,9 +231,16 @@ export const Home = ({
                 </div>
                 
                 <div className={`${!isEven ? 'lg:order-1' : ''}`}>
-                  <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border bg-muted">
-                    <img src={withBaseImage(stepImages[index])} alt={step.title} className="w-full h-auto" />
-                  </div>
+                  {index === 4 ? (
+                    <div className="relative px-8 pt-0 pb-0 overflow-visible">
+                      <div className="absolute top-0 left-0 right-0 bottom-16 rounded-2xl shadow-xl border border-border bg-transparent" />
+                      <img src={withBaseImage(stepImages[index])} alt={step.title} className="relative w-full h-auto scale-[1.18] translate-y-4" />
+                    </div>
+                  ) : (
+                    <div className="relative rounded-2xl overflow-hidden shadow-xl border border-border bg-muted">
+                      <img src={withBaseImage(stepImages[index])} alt={step.title} className="w-full h-auto" />
+                    </div>
+                  )}
                 </div>
               </div>;
         })}
