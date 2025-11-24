@@ -1,4 +1,4 @@
-## Astro + Vercel
+## Astro + Vercelt
 
 Minimal Astro site configured for Vercel.
 
