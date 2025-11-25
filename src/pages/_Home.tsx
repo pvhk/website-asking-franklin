@@ -130,7 +130,7 @@ export const Home = ({
             {/* Right Column - Video Demo */}
             <div className="relative animate-fade-in-up lg:animate-float">
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl border border-border bg-card">
-                <iframe className="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/ZB95aUZp-Hs" title="Asking Franklin Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                <iframe className="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/ToUJIlwNGUI" title="Asking Franklin Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent/50 rounded-full blur-3xl -z-10" />
