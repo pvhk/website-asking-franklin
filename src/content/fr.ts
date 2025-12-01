@@ -8,6 +8,7 @@ export const frContent: SiteContent = {
     home: 'Accueil',
     pricing: 'Tarifs',
     blog: 'Blog',
+    knowledge: 'Knowledge Base',
     laDepeche: 'La Dépêche',
     cta: "J'essaye gratuitement",
   },
@@ -176,6 +177,33 @@ export const frContent: SiteContent = {
         },
       ],
     },
+  },
+
+  knowledgeBase: {
+    meta: {
+      title: 'Knowledge Base - Asking Franklin',
+      description: 'Apprenez à maîtriser la création de contenu SEO avec Asking Franklin. Guides, tutoriels et meilleures pratiques.',
+    },
+    title: 'Knowledge Base',
+    subtitle: 'Tout ce que vous devez savoir pour maîtriser la création de contenu SEO avec Asking Franklin.',
+    articles: [
+      {
+        slug: 'getting-started-with-asking-franklin',
+        title: 'Débuter avec Asking Franklin',
+        excerpt: 'Apprenez les bases de l\'utilisation d\'Asking Franklin pour créer du contenu optimisé SEO qui se positionne dans Google et devient une référence pour les assistants IA.',
+        category: 'Démarrage',
+        date: '1 décembre 2025',
+        readTime: '5 min de lecture',
+      },
+      {
+        slug: 'how-to-connect-wordpress-to-asking-franklin',
+        title: 'Comment Connecter WordPress à Asking Franklin',
+        excerpt: 'Guide étape par étape pour connecter votre site WordPress à Asking Franklin pour une publication de contenu fluide. Apprenez à configurer les mots de passe d\'application et intégrer votre site.',
+        category: 'Tutoriels',
+        date: '1 décembre 2025',
+        readTime: '3 min de lecture',
+      },
+    ],
   },
 
   pricing: {
@@ -457,9 +485,10 @@ export const frContent: SiteContent = {
       {
         title: 'Produit',
         items: [
-          { label: 'Accueil', href: '/fr' },
-          { label: 'Tarifs', href: '/fr/tarifs' },
-          { label: 'Blog', href: 'https://blog.askingfranklin.com/' },
+            { label: 'Accueil', href: '/fr' },
+            { label: 'Tarifs', href: '/fr/tarifs' },
+            { label: 'Knowledge Base', href: '/fr/base-de-connaissances' },
+            { label: 'Blog', href: 'https://blog.askingfranklin.com/' },
         ],
       },
       {

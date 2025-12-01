@@ -8,6 +8,7 @@ export const enContent: SiteContent = {
     home: 'Home',
     pricing: 'Pricing',
     blog: 'Blog',
+    knowledge: 'Knowledge Base',
     laDepeche: 'La Dépêche',
     cta: 'Try it for free',
   },
@@ -176,6 +177,33 @@ export const enContent: SiteContent = {
         },
       ],
     },
+  },
+
+  knowledgeBase: {
+    meta: {
+      title: 'Knowledge Base - Asking Franklin',
+      description: 'Learn how to master SEO content creation with Asking Franklin. Guides, tutorials, and best practices.',
+    },
+    title: 'Knowledge Base',
+    subtitle: 'Everything you need to know to master SEO content creation with Asking Franklin.',
+    articles: [
+      {
+        slug: 'getting-started-with-asking-franklin',
+        title: 'Getting Started with Asking Franklin',
+        excerpt: 'Learn the basics of using Asking Franklin to create SEO-optimized content that ranks in Google and becomes a reference for AI assistants.',
+        category: 'Getting Started',
+        date: 'December 1, 2025',
+        readTime: '5 min read',
+      },
+      {
+        slug: 'how-to-connect-wordpress-to-asking-franklin',
+        title: 'How to Connect WordPress to Asking Franklin',
+        excerpt: 'Step-by-step guide to connect your WordPress site to Asking Franklin for seamless content publishing. Learn how to set up application passwords and integrate your site.',
+        category: 'Tutorials',
+        date: 'December 1, 2025',
+        readTime: '3 min read',
+      },
+    ],
   },
 
   pricing: {
@@ -459,6 +487,7 @@ export const enContent: SiteContent = {
         items: [
           { label: 'Home', href: '/' },
           { label: 'Pricing', href: '/pricing' },
+          { label: 'Knowledge Base', href: '/knowledge-base' },
           { label: 'Blog', href: 'https://blog.askingfranklin.com/' },
         ],
       },

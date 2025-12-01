@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { KnowledgeArticle } from '@/pages/_KnowledgeArticle';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'en';
+const content = getContent(lang);
+const article = content.knowledgeBase.articles[0];
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={`${article.title} - ${content.siteName}`}
+  metaDescription={article.excerpt}
+  currentPath="/knowledge-base/getting-started-with-asking-franklin"
+>
+  <KnowledgeArticle lang={lang} client:load />
+</BaseLayout>
+

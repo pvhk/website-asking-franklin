@@ -53,6 +53,15 @@ export interface BlogArticle {
   date: string;
 }
 
+export interface KnowledgeArticle {
+  slug: string;
+  title: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  readTime?: string;
+}
+
 export interface LegalSection {
   title: string;
   content: string;
@@ -65,6 +74,7 @@ export interface SiteContent {
     home: string;
     pricing: string;
     blog: string;
+    knowledge: string;
     laDepeche: string;
     cta: string;
   };
@@ -91,6 +101,12 @@ export interface SiteContent {
     subtitle: string;
     plans: PricingPlan[];
     faq: { title: string; items: FAQItem[]; };
+  };
+  knowledgeBase: {
+    meta: { title: string; description: string; };
+    title: string;
+    subtitle: string;
+    articles: KnowledgeArticle[];
   };
   terms: { meta: { title: string; description: string; }; title: string; intro?: string; sections: LegalSection[]; };
   legalNotice: { meta: { title: string; description: string; }; title: string; intro?: string; sections: LegalSection[]; };

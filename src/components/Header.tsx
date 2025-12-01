@@ -16,6 +16,7 @@ export const Header = ({ lang, content }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const homeUrl = withBase(lang === 'fr' ? '/fr' : '/');
   const pricingUrl = withBase(lang === 'fr' ? '/fr/tarifs' : '/pricing');
+  const knowledgeUrl = withBase(lang === 'fr' ? '/fr/base-de-connaissances' : '/knowledge-base');
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/80 backdrop-blur-xl supports-[backdrop-filter]:bg-background/80 shadow-sm">
@@ -39,6 +40,9 @@ export const Header = ({ lang, content }: HeaderProps) => {
             className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all"
           >
             {content.nav.blog}
+          </a>
+          <a href={knowledgeUrl} className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all">
+            {content.nav.knowledge}
           </a>
           <a
             href="https://ladepeche.askingfranklin.com/"
@@ -91,6 +95,13 @@ export const Header = ({ lang, content }: HeaderProps) => {
               className="text-sm font-medium text-foreground hover:text-primary transition-colors"
             >
               {content.nav.blog}
+            </a>
+            <a
+              href={knowledgeUrl}
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {content.nav.knowledge}
             </a>
             <a
               href="https://ladepeche.askingfranklin.com/"
