@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 import { Banner } from "@/components/Banner";
 import { Footer } from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import PostHog from "@/components/posthog.astro";
 import { getContent, getAlternateUrl, type Language } from "@/lib/i18n";
 import type { SiteContent } from "@/content/types";
 import "@/index.css";
@@ -63,6 +64,7 @@ if (productsData && productsData.length > 0) {
 <!doctype html>
 <html lang={lang}>
   <head>
+    <PostHog />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
