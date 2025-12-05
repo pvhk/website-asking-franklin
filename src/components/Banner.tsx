@@ -5,59 +5,64 @@ interface BannerProps {
 }
 
 export const Banner = ({ lang }: BannerProps) => {
-  const text = lang === 'fr' 
-    ? 'Black Friday : -50% sur tous nos abonnements code "FRANKLIN50". Passez d\'invisible à incontournable !'
-    : 'Black Friday : - 50% off our subscriptions code "FRANKLIN50". Go from invisible to unmissable !';
+  const text = lang === 'fr'
+    ? '🎶 All I want for Christmas is... plus de trafic ! 🎶 Obtenez -50% avec le code "XMAS50". Passez d\'invisible à incontournable !'
+    : '🎶 All I want for Christmas is... more traffic ! 🎶 Get 50% off with code "XMAS50". From invisible to unmissable!';
 
   return (
-    <div className="sticky top-20 z-40 relative w-full bg-black py-3 text-center overflow-hidden">
-      {/* Left organic blob shape - fuchsia to purple gradient */}
-      <div 
-        className="absolute left-0 top-0 w-80 h-40 md:w-[500px] md:h-60 opacity-90"
+    <div
+      className="sticky top-20 z-40 relative w-full py-3 text-center overflow-hidden"
+      style={{
+        background: 'radial-gradient(ellipse at center, #D42426 0%, #800020 100%)'
+      }}
+    >
+      {/* Left organic blob shape - Christmas red gradient */}
+      <div
+        className="absolute left-0 top-0 w-80 h-40 md:w-[500px] md:h-60 opacity-30"
         style={{
-          background: 'linear-gradient(135deg, hsl(330 100% 70%) 0%, hsl(280 80% 50%) 100%)',
+          background: 'linear-gradient(135deg, #D42426 0%, #8B0000 100%)',
           borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%',
           filter: 'blur(60px)',
           transform: 'translate(-25%, -30%) rotate(-10deg)',
         }}
       />
-      
-      {/* Left small fuchsia circle */}
-      <div 
-        className="absolute left-20 md:left-40 top-14 md:top-20 w-20 h-20 md:w-28 md:h-28 opacity-80"
+
+      {/* Left small red circle */}
+      <div
+        className="absolute left-20 md:left-40 top-14 md:top-20 w-20 h-20 md:w-28 md:h-28 opacity-40"
         style={{
-          background: 'radial-gradient(circle, hsl(330 100% 70%), hsl(330 100% 60%))',
+          background: 'radial-gradient(circle, #D42426, #B22222)',
           borderRadius: '50%',
           filter: 'blur(20px)',
         }}
       />
 
-      {/* Right organic blob shape - fuchsia to blue-purple gradient */}
-      <div 
-        className="absolute right-0 top-0 w-80 h-40 md:w-[500px] md:h-60 opacity-90"
+      {/* Right organic blob shape - burgundy to red gradient */}
+      <div
+        className="absolute right-0 top-0 w-80 h-40 md:w-[500px] md:h-60 opacity-30"
         style={{
-          background: 'linear-gradient(135deg, hsl(330 100% 70%) 0%, hsl(260 80% 50%) 100%)',
+          background: 'linear-gradient(135deg, #D42426 0%, #800020 100%)',
           borderRadius: '40% 60% 70% 30% / 40% 70% 30% 60%',
           filter: 'blur(60px)',
           transform: 'translate(25%, -30%) rotate(10deg)',
         }}
       />
-      
-      {/* Right top medium purple circle */}
-      <div 
-        className="absolute right-24 md:right-40 top-10 md:top-14 w-16 h-16 md:w-24 md:h-24 opacity-80"
+
+      {/* Right top medium burgundy circle */}
+      <div
+        className="absolute right-24 md:right-40 top-10 md:top-14 w-16 h-16 md:w-24 md:h-24 opacity-40"
         style={{
-          background: 'radial-gradient(circle, hsl(280 70% 60%), hsl(280 70% 50%))',
+          background: 'radial-gradient(circle, #800020, #660018)',
           borderRadius: '50%',
           filter: 'blur(20px)',
         }}
       />
-      
-      {/* Right bottom dark blue-purple circle */}
-      <div 
-        className="absolute right-16 md:right-28 top-20 md:top-28 w-14 h-14 md:w-20 md:h-20 opacity-80"
+
+      {/* Right bottom dark red circle */}
+      <div
+        className="absolute right-16 md:right-28 top-20 md:top-28 w-14 h-14 md:w-20 md:h-20 opacity-40"
         style={{
-          background: 'radial-gradient(circle, hsl(260 80% 50%), hsl(260 80% 40%))',
+          background: 'radial-gradient(circle, #8B0000, #660000)',
           borderRadius: '50%',
           filter: 'blur(20px)',
         }}
