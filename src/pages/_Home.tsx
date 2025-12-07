@@ -130,7 +130,7 @@ export const Home = ({
             {/* Right Column - Video Demo */}
             <div className="relative animate-fade-in-up lg:animate-float">
               <div className="relative aspect-video rounded-2xl overflow-hidden shadow-xl border border-border bg-card">
-                <iframe className="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/ToUJIlwNGUI" title="Asking Franklin Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
+                <iframe className="absolute inset-0 w-full h-full" src={lang === 'fr' ? "https://www.youtube.com/embed/ToUJIlwNGUI" : "https://www.youtube.com/embed/Bn72aTSQUqE"} title="Asking Franklin Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen />
               </div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10" />
               <div className="absolute -top-6 -left-6 w-32 h-32 bg-accent/50 rounded-full blur-3xl -z-10" />
@@ -342,42 +342,38 @@ export const Home = ({
       </section>
 
       {/* Newsletter Section */}
-      <section className="bg-gradient-accent border-y border-border">
-        <div className="container py-20 md:py-28">
-          <div className="grid gap-12 lg:grid-cols-2 items-center max-w-5xl mx-auto">
-            <div className="space-y-6">
-              <Badge className="w-fit bg-primary text-primary-foreground">
-                {lang === 'fr' ? '📧 Newsletter exclusive' : '📧 Exclusive newsletter'}
-              </Badge>
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                {lang === 'fr' ? 'La Dépêche - Newsletter SEO' : 'The Dispatch - SEO Newsletter'}
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {lang === 'fr' 
-                  ? "Recevez chaque mois nos meilleurs conseils content, les dernières tendances IA en content marketing et SEO."
-                  : 'Receive our best content tips, the latest AI trends in content marketing and SEO every month.'}
-              </p>
-              <p className="text-lg font-medium text-foreground leading-relaxed">
-                {lang === 'fr'
-                  ? "En bref, que des tips actionnables dénichés par l'équipe d'Asking Franklin !"
-                  : "In short, only actionable tips uncovered by the Asking Franklin team!"}
-              </p>
-              <ul className="space-y-2">
-                {(lang === 'fr' 
-                  ? ['Ici, no bullshit.', 'Pas de veille classique,', 'que des découvertes,', "des retours d'expériences..."]
-                  : ['Here, no bullshit.', 'No classic monitoring,', 'only discoveries,', 'feedback...']).map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <span className="text-primary font-bold">-</span>
-                    <span className="text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {lang === 'fr' && (
+        <section className="bg-gradient-accent border-y border-border">
+          <div className="container py-20 md:py-28">
+            <div className="grid gap-12 lg:grid-cols-2 items-center max-w-5xl mx-auto">
+              <div className="space-y-6">
+                <Badge className="w-fit bg-primary text-primary-foreground">
+                  📧 Newsletter exclusive
+                </Badge>
+                <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                  La Dépêche - Newsletter SEO
+                </h2>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Recevez chaque mois nos meilleurs conseils content, les dernières tendances IA en content marketing et SEO.
+                </p>
+                <p className="text-lg font-medium text-foreground leading-relaxed">
+                  En bref, que des tips actionnables dénichés par l'équipe d'Asking Franklin !
+                </p>
+                <ul className="space-y-2">
+                  {['Ici, no bullshit.', 'Pas de veille classique,', 'que des découvertes,', "des retours d'expériences..."].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-primary font-bold">-</span>
+                      <span className="text-foreground">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <NewsletterForm lang={lang} />
+              <NewsletterForm lang={lang} />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* FAQ Section */}
       <section className="container py-20 md:py-28">

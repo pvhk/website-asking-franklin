@@ -44,14 +44,16 @@ export const Header = ({ lang, content }: HeaderProps) => {
           <a href={knowledgeUrl} className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all">
             {content.nav.knowledge}
           </a>
-          <a
-            href="https://ladepeche.askingfranklin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all"
-          >
-            {content.nav.laDepeche}
-          </a>
+          {lang === 'fr' && (
+            <a
+              href="https://ladepeche.askingfranklin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all"
+            >
+              {content.nav.laDepeche}
+            </a>
+          )}
           <LanguageSwitcher currentLang={lang} />
           <Button className="shadow-primary font-semibold" asChild>
             <a href="https://app.askingfranklin.com/register" target="_blank" rel="noopener noreferrer">
@@ -103,14 +105,16 @@ export const Header = ({ lang, content }: HeaderProps) => {
             >
               {content.nav.knowledge}
             </a>
-            <a
-              href="https://ladepeche.askingfranklin.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              {content.nav.laDepeche}
-            </a>
+            {lang === 'fr' && (
+              <a
+                href="https://ladepeche.askingfranklin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                {content.nav.laDepeche}
+              </a>
+            )}
             <div className="flex items-center gap-4">
               <LanguageSwitcher currentLang={lang} />
               <Button asChild className="w-full">
