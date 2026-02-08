@@ -13,6 +13,9 @@ import {
   buildFAQPageSchema,
   buildProductSchema,
   buildSoftwareApplicationSchema,
+  buildBreadcrumbListSchema,
+  buildArticleSchema,
+  buildHowToSchema,
 } from "@/lib/schemaBuilder";
 import { withBaseImage } from "@/lib/baseUrl";
 
@@ -21,15 +24,28 @@ interface Props {
   metaTitle: string;
   metaDescription: string;
   currentPath: string;
+  noindex?: boolean;
   faqData?: Array<{ question: string; answer: string }>;
   productsData?: Array<{
     name: string;
     description: string;
     price: string;
   }>;
+  breadcrumbs?: Array<{ name: string; url?: string }>;
+  articleData?: {
+    headline: string;
+    description: string;
+    datePublished: string;
+    dateModified?: string;
+  };
+  howToData?: {
+    name: string;
+    description: string;
+    steps: Array<{ name: string; text: string }>;
+  };
 }
 
-const { lang, metaTitle, metaDescription, currentPath, faqData, productsData } =
+const { lang, metaTitle, metaDescription, currentPath, noindex, faqData, productsData, breadcrumbs, articleData, howToData } =
   Astro.props;
 const content: SiteContent = getContent(lang);
 
@@ -63,6 +79,31 @@ if (productsData && productsData.length > 0) {
     );
   });
 }
+
+// Build BreadcrumbList schema
+let breadcrumbSchema = null;
+if (breadcrumbs && breadcrumbs.length > 0) {
+  breadcrumbSchema = buildBreadcrumbListSchema(breadcrumbs);
+}
+
+// Build Article schema
+let articleSchema = null;
+if (articleData) {
+  articleSchema = buildArticleSchema(
+    articleData.headline,
+    articleData.description,
+    canonicalUrl,
+    articleData.datePublished,
+    lang,
+    articleData.dateModified,
+  );
+}
+
+// Build HowTo schema
+let howToSchema = null;
+if (howToData) {
+  howToSchema = buildHowToSchema(howToData.name, howToData.description, howToData.steps);
+}
 ---
 
 <!doctype html>
@@ -81,7 +122,7 @@ if (productsData && productsData.length > 0) {
     <title>{metaTitle}</title>
     <meta name="description" content={metaDescription} />
     <meta name="author" content="Asking Franklin" />
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"} />
     <meta property="og:site_name" content="Asking Franklin" />
 
     <!-- Canonical -->
@@ -167,6 +208,37 @@ if (productsData && productsData.length > 0) {
         />
       ))
     }
+
+    <!-- Structured Data - BreadcrumbList -->
+    {
+      breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(breadcrumbSchema)}
+        />
+      )
+    }
+
+    <!-- Structured Data - Article -->
+    {
+      articleSchema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(articleSchema)}
+        />
+      )
+    }
+
+    <!-- Structured Data - HowTo -->
+    {
+      howToSchema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(howToSchema)}
+        />
+      )
+    }
+
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {

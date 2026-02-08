@@ -5,6 +5,7 @@ import { getContent } from '@/lib/i18n';
 
 const lang = 'fr';
 const content = getContent(lang);
+const faqItems = content.features.optimizedContent.faq?.items || [];
 ---
 
 <BaseLayout
@@ -12,6 +13,12 @@ const content = getContent(lang);
   metaTitle={content.features.optimizedContent.meta.title}
   metaDescription={content.features.optimizedContent.meta.description}
   currentPath="/fr/fonctionnalites/contenu-optimise"
+  faqData={faqItems}
+  breadcrumbs={[
+    { name: 'Accueil', url: 'https://www.askingfranklin.com/fr' },
+    { name: 'Fonctionnalités', url: 'https://www.askingfranklin.com/fr' },
+    { name: 'Contenu Optimisé' },
+  ]}
 >
   <FeatureOptimizedContent lang={lang} content={content} client:load />
 </BaseLayout>

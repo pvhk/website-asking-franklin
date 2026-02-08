@@ -80,6 +80,7 @@ export interface FeaturePage {
   subtitle: string;
   sections: FeatureSection[];
   cta: { title: string; description: string; button: string; };
+  faq?: { title: string; items: FAQItem[]; };
 }
 
 export interface ComingSoonPage {
@@ -89,6 +90,7 @@ export interface ComingSoonPage {
   subtitle: string;
   features: string[];
   cta: { title: string; description: string; button: string; };
+  faq?: { title: string; items: FAQItem[]; };
 }
 
 export interface SiteContent {

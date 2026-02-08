@@ -214,3 +214,99 @@ export const buildProductSchema = (
     },
   };
 };
+
+export interface BreadcrumbListSchema {
+  '@context': string;
+  '@type': string;
+  itemListElement: Array<{
+    '@type': string;
+    position: number;
+    name: string;
+    item?: string;
+  }>;
+}
+
+export const buildBreadcrumbListSchema = (
+  items: Array<{ name: string; url?: string }>
+): BreadcrumbListSchema => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    ...(item.url ? { item: item.url } : {}),
+  })),
+});
+
+export interface ArticleSchema {
+  '@context': string;
+  '@type': string;
+  headline: string;
+  description: string;
+  author: { '@type': string; name: string; url: string };
+  publisher: { '@id': string };
+  datePublished: string;
+  dateModified: string;
+  mainEntityOfPage: { '@type': string; '@id': string };
+  inLanguage: string;
+}
+
+export const buildArticleSchema = (
+  headline: string,
+  description: string,
+  url: string,
+  datePublished: string,
+  lang: Language,
+  dateModified?: string
+): ArticleSchema => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline,
+  description,
+  author: {
+    '@type': 'Organization',
+    name: 'Asking Franklin',
+    url: 'https://www.askingfranklin.com',
+  },
+  publisher: {
+    '@id': `https://www.askingfranklin.com/#organization`,
+  },
+  datePublished,
+  dateModified: dateModified || datePublished,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+  },
+  inLanguage: lang === 'fr' ? 'fr-FR' : 'en-US',
+});
+
+export interface HowToSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  description: string;
+  step: Array<{
+    '@type': string;
+    name: string;
+    text: string;
+    position: number;
+  }>;
+}
+
+export const buildHowToSchema = (
+  name: string,
+  description: string,
+  steps: Array<{ name: string; text: string }>
+): HowToSchema => ({
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name,
+  description,
+  step: steps.map((s, i) => ({
+    '@type': 'HowToStep',
+    name: s.name,
+    text: s.text,
+    position: i + 1,
+  })),
+});

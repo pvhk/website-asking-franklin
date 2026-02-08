@@ -266,6 +266,31 @@ export const frContent: SiteContent = {
         description: 'Rejoignez des milliers de marketeurs qui créent du contenu optimisé SEO avec Franklin.',
         button: 'Essayer gratuitement 7 jours',
       },
+      faq: {
+        title: 'FAQ - Contenu optimisé SEO & GEO',
+        items: [
+          {
+            question: "Comment Asking Franklin optimise-t-il le contenu pour le SEO et le GEO ?",
+            answer: "Asking Franklin combine l'analyse SERP des 10 premiers résultats Google avec l'optimisation GEO (Generative Engine Optimization). L'outil analyse la structure, la longueur et les patterns sémantiques des contenus les mieux positionnés, puis génère des articles optimisés pour être à la fois bien classés sur Google et cités par les IA génératives comme ChatGPT, Perplexity et Gemini.",
+          },
+          {
+            question: "Combien de temps faut-il pour générer un article optimisé avec Asking Franklin ?",
+            answer: "Le processus complet — de l'analyse de l'intention de recherche à la génération du contenu optimisé SEO — prend entre 2 et 8 minutes. Vous pouvez ensuite personnaliser le contenu via l'Assistant Franklin conversationnel pour ajouter votre expertise métier.",
+          },
+          {
+            question: "Asking Franklin est-il compatible avec WordPress ?",
+            answer: "Oui, Asking Franklin s'intègre directement avec WordPress. Vous pouvez exporter vos articles en un clic avec un formatage parfait, en conservant toutes les balises SEO, la structure HTML, les titres, listes et liens internes.",
+          },
+          {
+            question: "L'IA d'Asking Franklin génère-t-elle du contenu unique ?",
+            answer: "Oui, chaque article généré par Asking Franklin est 100% unique et sans plagiat. L'IA s'appuie sur l'analyse SERP et vos instructions pour créer du contenu original qui respecte votre charte éditoriale et votre ton de voix.",
+          },
+          {
+            question: "Qu'est-ce que le score SEO en temps réel ?",
+            answer: "Le score SEO en temps réel évalue votre contenu sur 8 métriques clés pendant que vous écrivez : nombre de mots, structure des titres (H1/H2), densité de mots-clés, liens internes, placement des mots-clés et plus. Le score s'actualise instantanément pour vous guider vers un contenu parfaitement optimisé.",
+          },
+        ],
+      },
     },
     dataInsights: {
       meta: {
@@ -322,6 +347,27 @@ export const frContent: SiteContent = {
         description: 'Prenez chaque décision de contenu appuyée par des données réelles.',
         button: 'Commencer votre essai gratuit',
       },
+      faq: {
+        title: 'FAQ - Données & Insights SEO',
+        items: [
+          {
+            question: "Quelles métriques SEO Asking Franklin fournit-il ?",
+            answer: "Asking Franklin fournit plus de 100 métriques par domaine et 50 données par mot-clé, incluant : volume de recherche, score de difficulté, CPC, niveau de concurrence, Score d'Opportunité propriétaire, valeur estimée du trafic (ETV), distribution d'intention de recherche, et suivi de position sur 12 buckets (Top 1, 2-3, 4-10, etc.).",
+          },
+          {
+            question: "Comment fonctionne le suivi de position sur 12 buckets ?",
+            answer: "Le suivi de position répartit vos classements Google dans 12 tranches : Top 1, 2-3, 4-10, 11-20, 21-30, 31-40, 41-50, 51-60, 61-70, 71-80, 81-90, et 91-100. Chaque semaine, vous voyez les gains, les pertes, les nouvelles positions et les positions perdues pour chaque bucket.",
+          },
+          {
+            question: "Asking Franklin suit-il les AI Overviews de Google ?",
+            answer: "Oui, Asking Franklin suit séparément votre présence dans les AI Overviews de Google (anciennement SGE) en plus des classements organiques traditionnels. Cette fonctionnalité vous permet d'identifier où votre contenu est cité par les résumés IA — une source de trafic en forte croissance.",
+          },
+          {
+            question: "Comment le Score d'Opportunité est-il calculé ?",
+            answer: "Le Score d'Opportunité est un indicateur propriétaire qui équilibre le potentiel de trafic d'un mot-clé (volume de recherche, ETV) avec l'effort nécessaire pour se positionner (difficulté, concurrence). Plus le score est élevé, plus le rapport bénéfice/effort est favorable.",
+          },
+        ],
+      },
     },
     autopilot: {
       meta: {
@@ -345,6 +391,23 @@ export const frContent: SiteContent = {
         title: 'Soyez les premiers informés',
         description: 'Autopilot arrive bientôt. Obtenez un accès anticipé lors du lancement.',
         button: "Rejoindre la liste d'attente",
+      },
+      faq: {
+        title: 'FAQ - Autopilot',
+        items: [
+          {
+            question: "Quand la fonctionnalité Autopilot sera-t-elle disponible ?",
+            answer: "Autopilot est actuellement en développement. Inscrivez-vous à la liste d'attente pour être parmi les premiers informés du lancement et bénéficier d'un accès anticipé.",
+          },
+          {
+            question: "Que fera Autopilot concrètement ?",
+            answer: "Autopilot automatisera l'ensemble du workflow de création de contenu : découverte de mots-clés, génération d'articles optimisés SEO, publication automatique sur WordPress, suggestions de maillage interne, et rafraîchissement automatique des contenus obsolètes.",
+          },
+          {
+            question: "Autopilot remplacera-t-il le contrôle humain ?",
+            answer: "Non, Autopilot est conçu pour automatiser les tâches répétitives tout en vous laissant le contrôle total sur la stratégie, la validation et la personnalisation. Vous définissez les paramètres et Franklin exécute selon vos critères.",
+          },
+        ],
       },
     },
   },
@@ -476,8 +539,8 @@ export const frContent: SiteContent = {
 
   terms: {
     meta: {
-      title: 'CGV - Asking Franklin',
-      description: "Conditions Générales de Vente",
+      title: 'CGV - Conditions Générales de Vente | Asking Franklin',
+      description: "Consultez les Conditions Générales de Vente d'Asking Franklin, l'assistant IA SEO. Modalités d'abonnement, crédits, facturation et politique d'essai gratuit de 7 jours.",
     },
     title: "Conditions Générales de Vente (CGV) – Asking Franklin",
     intro: "Dernière mise à jour : 16 novembre 2025",
@@ -535,8 +598,8 @@ export const frContent: SiteContent = {
 
   legalNotice: {
     meta: {
-      title: 'Mentions Légales - Asking Franklin',
-      description: 'Informations légales',
+      title: 'Mentions Légales - Asking Franklin | Assistant IA SEO',
+      description: "Mentions légales d'Asking Franklin : éditeur du site, hébergement, propriété intellectuelle et conditions d'utilisation de l'assistant IA SEO de création de contenu optimisé.",
     },
     title: 'Mentions Légales',
     sections: [
@@ -565,8 +628,8 @@ export const frContent: SiteContent = {
 
   privacyPolicy: {
     meta: {
-      title: 'Politique de Confidentialité - Asking Franklin',
-      description: 'Comment nous protégeons vos données',
+      title: 'Politique de Confidentialité - Asking Franklin | Protection des données',
+      description: "Découvrez comment Asking Franklin protège vos données personnelles. Politique de confidentialité conforme au RGPD : collecte, traitement, stockage et droits des utilisateurs de l'assistant IA SEO.",
     },
     title: 'Politique de Confidentialité d\'Asking Franklin',
     intro: 'Dernière mise à jour : 16 novembre 2025\n\nLa présente politique de confidentialité a pour objet d\'informer les utilisateurs de la manière dont Asking Franklin collecte, utilise, conserve et protège leurs données personnelles dans le cadre de l\'utilisation de l\'outil de génération de contenu optimisé pour le SEO et les LLMs.',

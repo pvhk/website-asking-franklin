@@ -13,6 +13,17 @@ const article = content.knowledgeBase.articles[0];
   metaTitle={`${article.title} - ${content.siteName}`}
   metaDescription={article.excerpt}
   currentPath="/fr/base-de-connaissances/getting-started-with-asking-franklin"
+  breadcrumbs={[
+    { name: 'Accueil', url: 'https://www.askingfranklin.com/fr' },
+    { name: 'Base de Connaissances', url: 'https://www.askingfranklin.com/fr/base-de-connaissances' },
+    { name: article.title },
+  ]}
+  articleData={{
+    headline: article.title,
+    description: article.excerpt,
+    datePublished: '2025-12-01',
+    dateModified: '2025-12-01',
+  }}
 >
   <KnowledgeArticle lang={lang} client:load />
 </BaseLayout>

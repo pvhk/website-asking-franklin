@@ -16,6 +16,7 @@ import {
   ArrowDownRight,
   Minus,
 } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 interface Props {
   lang: Language;
@@ -362,6 +363,76 @@ export const FeatureDataInsights = ({ lang, content }: Props) => {
           </div>
         </div>
       </section>
+
+      {/* Internal Links to Other Features */}
+      <section className="py-24 border-t border-border">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <p className="section-label mb-6">
+              {lang === 'fr' ? 'Découvrez aussi' : 'Explore more'}
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              {lang === 'fr' ? 'Les autres fonctionnalités d\'Asking Franklin' : 'Other Asking Franklin features'}
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+            <a href={lang === 'fr' ? '/fr/fonctionnalites/contenu-optimise' : '/features/write-optimized-content'} className="group p-6 rounded-2xl border border-border bg-card hover:border-primary/50 transition-all">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                {lang === 'fr' ? 'Contenu optimisé SEO & GEO' : 'SEO & GEO Optimized Content'}
+              </h3>
+              <p className="text-muted-foreground text-sm mb-3">
+                {lang === 'fr' ? 'Rédigez du contenu qui se positionne sur Google et les moteurs IA.' : 'Write content that ranks on Google and AI engines.'}
+              </p>
+              <span className="text-sm font-semibold text-primary inline-flex items-center gap-1">
+                {lang === 'fr' ? 'Découvrir' : 'Learn more'} <ArrowRight className="h-4 w-4" />
+              </span>
+            </a>
+            <a href={lang === 'fr' ? '/fr/fonctionnalites/autopilot' : '/features/autopilot'} className="group p-6 rounded-2xl border border-border bg-card hover:border-primary/50 transition-all">
+              <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                Autopilot
+              </h3>
+              <p className="text-muted-foreground text-sm mb-3">
+                {lang === 'fr' ? 'Automatisez votre création de contenu de A à Z.' : 'Automate your content creation from A to Z.'}
+              </p>
+              <span className="text-sm font-semibold text-primary inline-flex items-center gap-1">
+                {lang === 'fr' ? 'Découvrir' : 'Learn more'} <ArrowRight className="h-4 w-4" />
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      {pageContent.faq && pageContent.faq.items.length > 0 && (
+        <section className="py-24 border-t border-border">
+          <div className="container">
+            <div className="max-w-3xl mx-auto">
+              <div className="text-center mb-16">
+                <p className="section-label mb-6">FAQ</p>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+                  {pageContent.faq.title}
+                </h2>
+              </div>
+              <Accordion type="single" collapsible className="space-y-4">
+                {pageContent.faq.items.map((item, index) => (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="border border-border rounded-xl px-6 bg-card hover:border-foreground/20 transition-colors"
+                  >
+                    <AccordionTrigger className="text-left font-semibold hover:no-underline py-6">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                      {item.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA Section */}
       <section className="bg-foreground text-background">
