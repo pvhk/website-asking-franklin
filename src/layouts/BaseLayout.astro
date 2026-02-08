@@ -1,0 +1,202 @@
+---
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import PostHog from "@/components/posthog.astro";
+import { getContent, getAlternateUrl, type Language } from "@/lib/i18n";
+import type { SiteContent } from "@/content/types";
+import "@/index.css";
+import {
+  buildWebSiteSchema,
+  buildOrganizationSchema,
+  buildWebPageSchema,
+  buildFAQPageSchema,
+  buildProductSchema,
+  buildSoftwareApplicationSchema,
+} from "@/lib/schemaBuilder";
+import { withBaseImage } from "@/lib/baseUrl";
+
+interface Props {
+  lang: Language;
+  metaTitle: string;
+  metaDescription: string;
+  currentPath: string;
+  faqData?: Array<{ question: string; answer: string }>;
+  productsData?: Array<{
+    name: string;
+    description: string;
+    price: string;
+  }>;
+}
+
+const { lang, metaTitle, metaDescription, currentPath, faqData, productsData } =
+  Astro.props;
+const content: SiteContent = getContent(lang);
+
+const baseUrl = "https://www.askingfranklin.com";
+const canonicalUrl = `${baseUrl}${currentPath}`;
+
+// Build schema.org structured data
+const webSiteSchema = buildWebSiteSchema();
+const organizationSchema = buildOrganizationSchema();
+const webPageSchema = buildWebPageSchema(
+  canonicalUrl,
+  metaTitle,
+  metaDescription,
+  lang,
+);
+
+let faqSchema = null;
+if (faqData && faqData.length > 0) {
+  faqSchema = buildFAQPageSchema(faqData);
+}
+
+// Build SoftwareApplication schema for homepage
+const isHomepage = currentPath === '/' || currentPath === '/fr';
+const softwareAppSchema = isHomepage ? buildSoftwareApplicationSchema(lang) : null;
+
+const productSchemas: any[] = [];
+if (productsData && productsData.length > 0) {
+  productsData.forEach((product) => {
+    productSchemas.push(
+      buildProductSchema(product.name, product.description, product.price),
+    );
+  });
+}
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <PostHog />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts - Instrument Serif + Caveat (handwritten) for hero -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet" />
+
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <meta name="author" content="Asking Franklin" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:site_name" content="Asking Franklin" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Hreflang -->
+    <link
+      rel="alternate"
+      hrefLang="en"
+      href={`${baseUrl}${getAlternateUrl(currentPath, "en")}`}
+    />
+    <link
+      rel="alternate"
+      hrefLang="fr"
+      href={`${baseUrl}${getAlternateUrl(currentPath, "fr")}`}
+    />
+    <link
+      rel="alternate"
+      hrefLang="x-default"
+      href={`${baseUrl}${getAlternateUrl(currentPath, "en")}`}
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={lang === "fr" ? "fr_FR" : "en_US"} />
+    <meta
+      property="og:locale:alternate"
+      content={lang === "fr" ? "en_US" : "fr_FR"}
+    />
+    <meta property="og:image" content={withBaseImage("/logo.svg")} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metaTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={withBaseImage("/logo.svg")} />
+
+    <!-- Structured Data - WebSite + Organization -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(webSiteSchema)}
+    />
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(organizationSchema)}
+    />
+
+    <!-- Structured Data - WebPage -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(webPageSchema)}
+    />
+
+    <!-- Structured Data - FAQPage -->
+    {
+      faqSchema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(faqSchema)}
+        />
+      )
+    }
+
+    <!-- Structured Data - SoftwareApplication (homepage only) -->
+    {
+      softwareAppSchema && (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(softwareAppSchema)}
+        />
+      )
+    }
+
+    <!-- Structured Data - Products -->
+    {
+      productSchemas.map((productSchema) => (
+        <script
+          type="application/ld+json"
+          set:html={JSON.stringify(productSchema)}
+        />
+      ))
+    }
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KSFSG2XT");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KSFSG2XT"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <div class="flex min-h-screen flex-col">
+      <Header lang={lang} content={content} client:load />
+      <main class="flex-1">
+        <slot />
+      </main>
+      <Footer content={content} client:load />
+    </div>
+    <Toaster client:load />
+  </body>
+</html>

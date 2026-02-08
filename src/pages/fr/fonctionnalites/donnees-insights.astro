@@ -1,0 +1,17 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { FeatureDataInsights } from '@/pages/_FeatureDataInsights';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'fr';
+const content = getContent(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={content.features.dataInsights.meta.title}
+  metaDescription={content.features.dataInsights.meta.description}
+  currentPath="/fr/fonctionnalites/donnees-insights"
+>
+  <FeatureDataInsights lang={lang} content={content} client:load />
+</BaseLayout>

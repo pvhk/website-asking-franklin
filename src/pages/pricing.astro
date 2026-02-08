@@ -1,0 +1,22 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { Pricing } from '@/pages/_Pricing';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'en';
+const content = getContent(lang);
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={content.pricing.meta.title}
+  metaDescription={content.pricing.meta.description}
+  currentPath="/pricing"
+  productsData={content.pricing.plans.map(plan => ({
+    name: plan.name,
+    description: plan.description,
+    price: plan.price
+  }))}
+>
+  <Pricing lang={lang} content={content} client:load />
+</BaseLayout>

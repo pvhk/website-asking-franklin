@@ -1,0 +1,19 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { WordPressConnectionArticle } from '@/pages/_WordPressConnectionArticle';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'fr';
+const content = getContent(lang);
+const article = content.knowledgeBase.articles.find(a => a.slug === 'how-to-connect-wordpress-to-asking-franklin');
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={`${article?.title || 'Comment Connecter WordPress'} - ${content.siteName}`}
+  metaDescription={article?.excerpt || 'Apprenez à connecter votre site WordPress à Asking Franklin pour une publication de contenu fluide.'}
+  currentPath="/fr/base-de-connaissances/how-to-connect-wordpress-to-asking-franklin"
+>
+  <WordPressConnectionArticle lang={lang} client:load />
+</BaseLayout>
+
