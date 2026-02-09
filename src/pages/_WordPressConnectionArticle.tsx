@@ -458,24 +458,24 @@ export const WordPressConnectionArticle = ({ lang }: WordPressConnectionArticleP
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-primary text-primary-foreground">
-        <div className="container py-16 md:py-20">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+      <section className="bg-foreground text-background">
+        <div className="container py-20 md:py-28">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               {isEnglish
                 ? 'Ready to Streamline Your Content Publishing?'
                 : 'Prêt à Simplifier la Publication de Votre Contenu ?'}
             </h2>
-            <p className="text-lg text-primary-foreground/90">
+            <p className="text-xl text-background/80">
               {isEnglish
                 ? 'Connect your WordPress site to Asking Franklin and publish SEO-optimized content in one click.'
                 : 'Connectez votre site WordPress à Asking Franklin et publiez du contenu optimisé SEO en un clic.'
               }
             </p>
-            <Button size="lg" variant="secondary" className="shadow-xl" asChild>
+            <Button size="lg" variant="secondary" className="h-14 px-8 rounded-full group" asChild>
               <a href="https://app.askingfranklin.com/register" target="_blank" rel="noopener noreferrer">
                 {isEnglish ? 'Start Free Trial' : 'Commencer l\'Essai Gratuit'}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 btn-arrow" />
               </a>
             </Button>
           </div>

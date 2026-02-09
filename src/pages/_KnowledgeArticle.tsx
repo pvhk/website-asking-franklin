@@ -378,15 +378,15 @@ export const KnowledgeArticle = ({ lang }: KnowledgeArticleProps) => {
       </section>
 
       {/* Related Articles */}
-      <section className="container py-16 md:py-20">
+      <section className="container py-20 md:py-28">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold mb-8">
             {isEnglish ? 'Related Articles' : 'Articles Connexes'}
           </h2>
-          <Card className="bg-gradient-accent border-border">
-            <CardContent className="p-6">
+          <Card className="bg-card border-border hover-lift">
+            <CardContent className="p-8">
               <p className="text-muted-foreground text-center">
-                {isEnglish 
+                {isEnglish
                   ? 'More articles coming soon! Check back regularly for new content.'
                   : 'Plus d\'articles à venir ! Revenez régulièrement pour du nouveau contenu.'
                 }
@@ -397,23 +397,23 @@ export const KnowledgeArticle = ({ lang }: KnowledgeArticleProps) => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-primary text-primary-foreground">
-        <div className="container py-16 md:py-20">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+      <section className="bg-foreground text-background">
+        <div className="container py-20 md:py-28">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
               {isEnglish
                 ? 'Ready to Create Your First Article?'
                 : 'Prêt à Créer Votre Premier Article ?'}
             </h2>
-            <p className="text-lg text-primary-foreground/90">
+            <p className="text-xl text-background/80">
               {isEnglish
                 ? 'Start your free 7-day trial and experience the power of AI-assisted SEO content creation.'
                 : 'Commencez votre essai gratuit de 7 jours et découvrez la puissance de la création de contenu SEO assistée par IA.'}
             </p>
-            <Button size="lg" variant="secondary" className="shadow-xl" asChild>
+            <Button size="lg" variant="secondary" className="h-14 px-8 rounded-full group" asChild>
               <a href="https://app.askingfranklin.com/register" target="_blank" rel="noopener noreferrer">
                 {isEnglish ? 'Start Free Trial' : 'Commencer l\'Essai Gratuit'}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 btn-arrow" />
               </a>
             </Button>
           </div>
@@ -422,6 +422,7 @@ export const KnowledgeArticle = ({ lang }: KnowledgeArticleProps) => {
     </>
   );
 };
+
 
 
 

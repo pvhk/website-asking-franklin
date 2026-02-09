@@ -11,9 +11,31 @@ const article = content.knowledgeBase.articles.find(a => a.slug === 'how-to-conn
 <BaseLayout
   lang={lang}
   metaTitle={`${article?.title || 'Comment Connecter WordPress'} - ${content.siteName}`}
-  metaDescription={article?.excerpt || 'Apprenez à connecter votre site WordPress à Asking Franklin pour une publication de contenu fluide.'}
+  metaDescription={article?.excerpt || 'Apprenez à connecter votre site WordPress à Asking Franklin pour publier du contenu facilement.'}
   currentPath="/fr/base-de-connaissances/how-to-connect-wordpress-to-asking-franklin"
+  breadcrumbs={[
+    { name: 'Accueil', url: 'https://www.askingfranklin.com/fr' },
+    { name: 'Base de Connaissances', url: 'https://www.askingfranklin.com/fr/base-de-connaissances' },
+    { name: article?.title || 'Comment Connecter WordPress' },
+  ]}
+  articleData={{
+    headline: article?.title || 'Comment Connecter WordPress à Asking Franklin',
+    description: article?.excerpt || 'Apprenez à connecter votre site WordPress à Asking Franklin.',
+    datePublished: '2025-12-01',
+    dateModified: '2025-12-01',
+  }}
+  howToData={{
+    name: 'Comment Connecter WordPress à Asking Franklin',
+    description: 'Connectez votre site WordPress à Asking Franklin pour publier du contenu généré par IA directement en un clic.',
+    steps: [
+      { name: 'Accéder aux Paramètres Utilisateur WordPress', text: 'Connectez-vous à votre tableau de bord WordPress et accédez à votre profil utilisateur.' },
+      { name: "Créer un Mot de Passe d'Application", text: "Dans la section Mots de passe d'application, entrez un nom (ex: Asking Franklin) et cliquez sur Ajouter." },
+      { name: "Copier Votre Mot de Passe d'Application", text: "Copiez le mot de passe généré immédiatement — il ne sera affiché qu'une seule fois." },
+      { name: 'Ouvrir les Paramètres Asking Franklin', text: 'Accédez à vos paramètres Asking Franklin et cliquez sur Gérer dans la section Domaine.' },
+      { name: 'Entrer les Identifiants WordPress', text: "Entrez votre URL WordPress, nom d'utilisateur et mot de passe d'application, puis cliquez sur Connecter." },
+      { name: 'Tester la Connexion', text: 'Vérifiez que la connexion est réussie avec le message de confirmation.' },
+    ],
+  }}
 >
   <WordPressConnectionArticle lang={lang} client:load />
 </BaseLayout>
-

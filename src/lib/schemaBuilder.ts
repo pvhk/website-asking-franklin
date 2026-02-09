@@ -77,7 +77,7 @@ export const buildWebSiteSchema = (): WebSiteSchema => ({
   '@id': `${BASE_URL}/#website`,
   url: BASE_URL,
   name: 'Asking Franklin',
-  description: 'AI Assistant for SEO Content - Create content that ranks in Google and becomes a reference source for generative AI',
+  description: 'Asking Franklin is the AI SEO assistant (assistant IA SEO) that analyzes search intent, writes optimized content, and helps you rank in Google and generative AI engines like ChatGPT, Perplexity, and Gemini.',
   inLanguage: ['en-US', 'fr-FR'],
   publisher: {
     '@id': `${BASE_URL}/#organization`,
@@ -133,6 +133,57 @@ export const buildFAQPageSchema = (
   })),
 });
 
+export interface SoftwareApplicationSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  description: string;
+  applicationCategory: string;
+  operatingSystem: string;
+  url: string;
+  offers: {
+    '@type': string;
+    priceCurrency: string;
+    price: string;
+    priceValidUntil: string;
+    availability: string;
+  };
+  aggregateRating: {
+    '@type': string;
+    ratingValue: string;
+    ratingCount: string;
+  };
+}
+
+export const buildSoftwareApplicationSchema = (lang: Language): SoftwareApplicationSchema => {
+  const validUntil = new Date();
+  validUntil.setFullYear(validUntil.getFullYear() + 1);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Asking Franklin',
+    description: lang === 'fr'
+      ? "Asking Franklin est l'assistant IA SEO qui analyse les intentions de recherche, rédige du contenu optimisé pour Google et les moteurs IA comme ChatGPT, Perplexity et Gemini."
+      : 'Asking Franklin is the AI SEO assistant that analyzes search intent, writes optimized content for Google and AI engines like ChatGPT, Perplexity, and Gemini.',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: BASE_URL,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      price: '49',
+      priceValidUntil: validUntil.toISOString().split('T')[0],
+      availability: 'https://schema.org/InStock',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      ratingCount: '300',
+    },
+  };
+};
+
 export const buildProductSchema = (
   name: string,
   description: string,
@@ -163,3 +214,99 @@ export const buildProductSchema = (
     },
   };
 };
+
+export interface BreadcrumbListSchema {
+  '@context': string;
+  '@type': string;
+  itemListElement: Array<{
+    '@type': string;
+    position: number;
+    name: string;
+    item?: string;
+  }>;
+}
+
+export const buildBreadcrumbListSchema = (
+  items: Array<{ name: string; url?: string }>
+): BreadcrumbListSchema => ({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    ...(item.url ? { item: item.url } : {}),
+  })),
+});
+
+export interface ArticleSchema {
+  '@context': string;
+  '@type': string;
+  headline: string;
+  description: string;
+  author: { '@type': string; name: string; url: string };
+  publisher: { '@id': string };
+  datePublished: string;
+  dateModified: string;
+  mainEntityOfPage: { '@type': string; '@id': string };
+  inLanguage: string;
+}
+
+export const buildArticleSchema = (
+  headline: string,
+  description: string,
+  url: string,
+  datePublished: string,
+  lang: Language,
+  dateModified?: string
+): ArticleSchema => ({
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline,
+  description,
+  author: {
+    '@type': 'Organization',
+    name: 'Asking Franklin',
+    url: 'https://www.askingfranklin.com',
+  },
+  publisher: {
+    '@id': `https://www.askingfranklin.com/#organization`,
+  },
+  datePublished,
+  dateModified: dateModified || datePublished,
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+  },
+  inLanguage: lang === 'fr' ? 'fr-FR' : 'en-US',
+});
+
+export interface HowToSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  description: string;
+  step: Array<{
+    '@type': string;
+    name: string;
+    text: string;
+    position: number;
+  }>;
+}
+
+export const buildHowToSchema = (
+  name: string,
+  description: string,
+  steps: Array<{ name: string; text: string }>
+): HowToSchema => ({
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name,
+  description,
+  step: steps.map((s, i) => ({
+    '@type': 'HowToStep',
+    name: s.name,
+    text: s.text,
+    position: i + 1,
+  })),
+});

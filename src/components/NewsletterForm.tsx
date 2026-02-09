@@ -128,7 +128,7 @@ export const NewsletterForm = ({ lang }: NewsletterFormProps) => {
           </div>
 
           <Button
-            className="w-full shadow-primary"
+            className="w-full"
             size="lg"
             type="submit"
             disabled={isLoading}

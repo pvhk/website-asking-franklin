@@ -13,12 +13,29 @@ const article = content.knowledgeBase.articles.find(a => a.slug === 'how-to-conn
   metaTitle={`${article?.title || 'How to Connect WordPress'} - ${content.siteName}`}
   metaDescription={article?.excerpt || 'Learn how to connect your WordPress site to Asking Franklin for seamless content publishing.'}
   currentPath="/knowledge-base/how-to-connect-wordpress-to-asking-franklin"
+  breadcrumbs={[
+    { name: 'Home', url: 'https://www.askingfranklin.com/' },
+    { name: 'Knowledge Base', url: 'https://www.askingfranklin.com/knowledge-base' },
+    { name: article?.title || 'How to Connect WordPress' },
+  ]}
+  articleData={{
+    headline: article?.title || 'How to Connect WordPress to Asking Franklin',
+    description: article?.excerpt || 'Learn how to connect your WordPress site to Asking Franklin.',
+    datePublished: '2025-12-01',
+    dateModified: '2025-12-01',
+  }}
+  howToData={{
+    name: 'How to Connect WordPress to Asking Franklin',
+    description: 'Connect your WordPress site to Asking Franklin to publish AI-generated content directly with one click.',
+    steps: [
+      { name: 'Access WordPress User Settings', text: 'Log in to your WordPress admin dashboard and navigate to your user profile settings.' },
+      { name: 'Create Application Password', text: 'In the Application Passwords section, enter a name (e.g., Asking Franklin) and click Add New.' },
+      { name: 'Copy Your Application Password', text: 'Copy the generated password immediately — it will only be shown once.' },
+      { name: 'Open Asking Franklin Settings', text: 'Navigate to your Asking Franklin settings and click the Manage button in the Domain section.' },
+      { name: 'Enter WordPress Credentials', text: 'Enter your WordPress URL, username, and application password, then click Connect.' },
+      { name: 'Test the Connection', text: 'Verify the connection is successful with the confirmation message.' },
+    ],
+  }}
 >
   <WordPressConnectionArticle lang={lang} client:load />
 </BaseLayout>
-
-
-
-
-
-

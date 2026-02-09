@@ -2,7 +2,7 @@ import type { SiteContent } from './types';
 
 export const frContent: SiteContent = {
   siteName: 'Asking Franklin',
-  siteDescription: 'Assistant IA pour le contenu SEO',
+  siteDescription: 'Assistant IA SEO pour rédiger du contenu optimisé pour Google et les moteurs IA',
 
   nav: {
     home: 'Accueil',
@@ -15,12 +15,12 @@ export const frContent: SiteContent = {
 
   home: {
     meta: {
-      title: 'Asking Franklin - Le meilleur assistant IA pour rédiger vos contenus SEO',
-      description: "L'assistant IA de rédaction SEO qui analyse ce que cherchent réellement vos clients, détecte les opportunités inexploitées et vous aide à créer des contenus qui se positionnent dans Google ET deviennent des sources de référence pour les IA génératives.",
+      title: 'Asking Franklin - Le meilleur assistant IA SEO pour du contenu qui ranke',
+      description: "Asking Franklin est l'assistant IA SEO qui analyse les intentions de recherche de vos clients, détecte les opportunités inexploitées et rédige du contenu optimisé pour ranker sur Google et les IA génératives. Essai gratuit 7 jours.",
     },
     hero: {
-      title: 'Le meilleur assistant IA pour rédiger vos contenus SEO',
-      subtitle: "Vous passez des heures à créer du contenu... sans générer le trafic que vous méritez ? Asking Franklin est l'assistant IA de rédaction SEO qui change la donne. Notre outil analyse ce que cherchent réellement vos clients, détecte les opportunités inexploitées et vous aide à créer des contenus qui se positionnent dans Google ET deviennent des sources de référence pour les IA génératives comme ChatGPT, Perplexity et Gemini.",
+      title: 'L\'assistant IA SEO qui booste votre trafic SEO & GEO',
+      subtitle: "Vous passez des heures à créer du contenu... sans générer le trafic que vous méritez ? Asking Franklin est l'assistant IA SEO qui analyse ce que cherchent vos clients et crée du contenu optimisé pour Google et les moteurs IA génératifs comme ChatGPT, Perplexity et Gemini.",
       cta: "Je teste gratuitement",
     },
     testimonials: {
@@ -29,23 +29,23 @@ export const frContent: SiteContent = {
       items: [
         {
           name: 'Quentin BARJON',
-          role: 'CMO',
-          company: 'JDC sA',
+          role: 'CMO JDC SA',
+          company: 'JDC SA',
           content: "Asking Franklin est vite devenu un incontournable pour notre stratégie SEO. L'outil est simple, clair et hyper pratique : il analyse tes mots-clés, les prend en compte et rédige pour toi des contenus optimisés et structurés. Un vrai gain de temps au quotidien.",
           rating: 5,
           image: 'quentin-barjon',
         },
         {
           name: 'Marlet KERVOLIN',
-          role: 'CEO',
-          company: 'Kaboom Kitchen',
+          role: 'CEO Agence MEMORI',
+          company: 'Agence MEMORI',
           content: "Asking Franklin est parfait pour gagner du temps sur sa rédaction d'article de blog. Je n'ai plus besoin de passer des heures pour obtenir des articles qualitatifs, l'IA me permet d'avoir un texte cohérent et pertinent quant à ma niche, bien plus rapidement. L'outil m'aide également pour la recherche de mots clés donc je sais que j'écris sur des sujets que ma cible recherche.",
           rating: 5,
           image: 'marlet-kervolin',
         },
         {
           name: 'Benoit GAILLAT',
-          role: 'CEO',
+          role: 'CEO Agence Pikka',
           company: 'Agence Pikka',
           content: "L'outil Asking Franklin est un véritable assistant qui m'aide à rédiger du contenu de qualité et qui rank. Avoir la possibilité de lui fournir des instructions précises sur mes cibles et mon contexte est vraiment game-changer pour moi !",
           rating: 5,
@@ -83,7 +83,7 @@ export const frContent: SiteContent = {
     },
     howItWorks: {
       title: 'Ok, concrètement comment ça marche ?',
-      subtitle: 'Asking Franklin booste la visibilité de vos contenus en combinant intentions de recherche, analyse des SERPs, de la concurrence et optimisation SEO pour ranker dans les LLMs ET Google.',
+      subtitle: 'Asking Franklin, votre assistant IA SEO, booste la visibilité de vos contenus en combinant analyse des intentions de recherche, des SERPs, de la concurrence et optimisation SEO & GEO pour ranker dans les LLMs ET Google.',
       anchor: 'comment-ca-marche',
       features: [
         {
@@ -156,24 +156,28 @@ export const frContent: SiteContent = {
       anchor: 'faq',
       items: [
         {
-          question: "Est-ce que je peux utiliser l'outil gratuitement ?",
-          answer: "Oui, vous pouvez créer un compte pour tester l'outil gratuitement durant 7 jours.",
+          question: "Qu'est-ce qu'un assistant IA SEO comme Asking Franklin ?",
+          answer: "Asking Franklin est un assistant IA SEO qui combine intelligence artificielle et analyse des moteurs de recherche pour vous aider à créer du contenu optimisé. L'outil analyse les intentions de recherche, les SERPs, la concurrence, et rédige des articles optimisés pour Google et les moteurs IA génératifs comme ChatGPT, Perplexity et Gemini.",
+        },
+        {
+          question: "Est-ce que je peux utiliser l'assistant IA SEO gratuitement ?",
+          answer: "Oui, vous pouvez créer un compte pour tester l'assistant IA SEO Asking Franklin gratuitement durant 7 jours, sans carte bancaire requise.",
         },
         {
           question: "Est-ce qu'Asking Franklin peut me servir même si je ne suis pas inspiré ou doué en rédaction ?",
-          answer: "C'est un des points forts de l'outil. Tapez simplement le mot-clé sur lequel vous voulez rédiger du contenu, Asking Franklin vous indiquera tout ce que recherchent les internautes à ce sujet. Mais aussi les volumes de recherche, la concurrence et les mots-clés associés.",
+          answer: "C'est justement un des points forts de cet assistant IA SEO. Tapez simplement le mot-clé sur lequel vous voulez rédiger du contenu, et Asking Franklin analysera tout ce que recherchent les internautes à ce sujet : volumes de recherche, concurrence, mots-clés associés et intentions de recherche.",
         },
         {
           question: "Pourquoi Asking Franklin est-il différent des autres outils de rédaction de contenu assistés par IA ?",
-          answer: "L'une des principales forces de l'outil réside dans sa capacité conversationnelle. Vous pouvez apporter votre expertise sur le sujet à n'importe quelle étape de la création de votre contenu. Donner des instructions précises, des détails sur vos cibles, le ton à adopter… Asking Franklin en tiendra compte et apprendra au fur et à mesure.",
+          answer: "L'une des principales forces de cet assistant IA SEO réside dans sa capacité conversationnelle. Vous pouvez apporter votre expertise sur le sujet à n'importe quelle étape de la création de votre contenu. Donner des instructions précises, des détails sur vos cibles, le ton à adopter… Asking Franklin en tiendra compte et apprendra au fur et à mesure.",
         },
         {
-          question: 'Est-ce que les contenus générés par IA sont pénalisés ?',
-          answer: "Un contenu généré par IA n'est pas pénalisé par défaut si ce dernier apporte une réelle expertise et des informations vérifiées. Il faut que ce dernier réponde véritablement aux questions que se posent les internautes.",
+          question: 'Est-ce que les contenus générés par un assistant IA SEO sont pénalisés par Google ?',
+          answer: "Non, un contenu généré par IA n'est pas pénalisé par défaut par Google si ce dernier apporte une réelle expertise et des informations vérifiées. L'assistant IA SEO Asking Franklin intègre des optimisations E-E-A-T (Expérience, Expertise, Autorité, Fiabilité) pour garantir la qualité et le positionnement de vos contenus.",
         },
         {
-          question: "Qu'est-ce qui différencie Asking Franklin des autres outils de rédaction automatisé par l'IA ?",
-          answer: "Asking Franklin peut automatiser la création de vos contenus, que vous n'ayez aucune idée ou déjà une stratégie de content marketing bien établie. Mais l'IA seule a ses limites c'est pourquoi vous avez toujours la plume sur vos contenus. Franklin devient alors un vrai assistant qui puisera dans les connaissances et instructions que vous lui fournirez pour répondre à vos besoins d'écriture !",
+          question: "Qu'est-ce qui différencie Asking Franklin des autres outils de rédaction automatisée par l'IA ?",
+          answer: "Asking Franklin est un assistant IA SEO complet qui va au-delà de la simple génération de texte. Il peut automatiser la création de vos contenus tout en combinant analyse SERP, détection d'intention de recherche, et optimisation SEO & GEO. L'IA seule a ses limites, c'est pourquoi vous gardez toujours la plume sur vos contenus. Franklin devient un vrai assistant qui puise dans vos connaissances et instructions pour répondre à vos besoins d'écriture.",
         },
       ],
     },
@@ -204,6 +208,208 @@ export const frContent: SiteContent = {
         readTime: '3 min de lecture',
       },
     ],
+  },
+
+  features: {
+    optimizedContent: {
+      meta: {
+        title: 'Rédigez du contenu optimisé - SEO & GEO | Asking Franklin',
+        description: 'Créez du contenu qui se positionne sur Google ET qui est cité par les assistants IA comme ChatGPT, Perplexity et Gemini. Optimisation SEO et GEO par IA.',
+      },
+      label: 'Optimisation SEO & GEO',
+      title: 'Rédigez du contenu qui se positionne partout',
+      subtitle: "Créez des articles optimisés pour les moteurs de recherche traditionnels (SEO) et les moteurs d'IA générative (GEO). Votre contenu devient une source de référence pour Google, ChatGPT, Perplexity, Claude et Gemini.",
+      sections: [
+        {
+          icon: 'Search',
+          title: 'Analyse SERP des 10 premiers concurrents',
+          description: 'Franklin analyse automatiquement les 10 pages les mieux positionnées pour votre mot-clé. Il extrait leur structure, longueur de contenu, titres et patterns sémantiques pour comprendre exactement ce que Google récompense.',
+        },
+        {
+          icon: 'Target',
+          title: "Détection de l'intention de recherche",
+          description: "Comprenez si les utilisateurs cherchent des informations, comparent des produits ou sont prêts à acheter. Franklin identifie l'intention de recherche principale et structure votre contenu pour correspondre aux attentes des utilisateurs.",
+        },
+        {
+          icon: 'BarChart3',
+          title: 'Score SEO en temps réel',
+          description: "Obtenez un feedback instantané sur 8 métriques SEO clés pendant que vous écrivez : nombre de mots, structure des titres, densité de mots-clés, liens internes, placement des mots-clés dans H1/H2, et plus. Regardez votre score s'améliorer en temps réel.",
+        },
+        {
+          icon: 'Sparkles',
+          title: 'Génération de contenu par IA',
+          description: "Du mot-clé à l'article publié en quelques minutes. Franklin génère un plan de contenu détaillé basé sur l'analyse SERP, puis rédige du contenu optimisé SEO avec une hiérarchie de titres appropriée et des mots-clés sémantiques.",
+        },
+        {
+          icon: 'MessageSquare',
+          title: 'Éditeur IA conversationnel',
+          description: "Éditez votre contenu par conversation naturelle. Demandez à Franklin de développer une section, changer le ton, ajouter des exemples ou réécrire des paragraphes. Votre expertise combinée à l'efficacité de l'IA.",
+        },
+        {
+          icon: 'FileText',
+          title: 'Génération de balises meta',
+          description: "Générez automatiquement des titres et descriptions meta optimisés qui génèrent des clics. Franklin suit les meilleures pratiques SEO pour les limites de caractères et le placement des mots-clés.",
+        },
+        {
+          icon: 'Palette',
+          title: 'Ton de voix personnalisé',
+          description: "Définissez la voix de votre marque et Franklin s'adapte. Qu'il soit formel, conversationnel, technique ou amical—votre contenu reste cohérent avec l'identité de votre marque.",
+        },
+        {
+          icon: 'Globe',
+          title: 'Support multilingue',
+          description: "Créez du contenu optimisé dans plusieurs langues. Franklin adapte les stratégies SEO pour différents marchés et comportements de recherche.",
+        },
+      ],
+      cta: {
+        title: 'Commencez à écrire du contenu qui se positionne',
+        description: 'Rejoignez des milliers de marketeurs qui créent du contenu optimisé SEO avec Franklin.',
+        button: 'Essayer gratuitement 7 jours',
+      },
+      faq: {
+        title: 'FAQ - Contenu optimisé SEO & GEO',
+        items: [
+          {
+            question: "Comment Asking Franklin optimise-t-il le contenu pour le SEO et le GEO ?",
+            answer: "Asking Franklin combine l'analyse SERP des 10 premiers résultats Google avec l'optimisation GEO (Generative Engine Optimization). L'outil analyse la structure, la longueur et les patterns sémantiques des contenus les mieux positionnés, puis génère des articles optimisés pour être à la fois bien classés sur Google et cités par les IA génératives comme ChatGPT, Perplexity et Gemini.",
+          },
+          {
+            question: "Combien de temps faut-il pour générer un article optimisé avec Asking Franklin ?",
+            answer: "Le processus complet — de l'analyse de l'intention de recherche à la génération du contenu optimisé SEO — prend entre 2 et 8 minutes. Vous pouvez ensuite personnaliser le contenu via l'Assistant Franklin conversationnel pour ajouter votre expertise métier.",
+          },
+          {
+            question: "Asking Franklin est-il compatible avec WordPress ?",
+            answer: "Oui, Asking Franklin s'intègre directement avec WordPress. Vous pouvez exporter vos articles en un clic avec un formatage parfait, en conservant toutes les balises SEO, la structure HTML, les titres, listes et liens internes.",
+          },
+          {
+            question: "L'IA d'Asking Franklin génère-t-elle du contenu unique ?",
+            answer: "Oui, chaque article généré par Asking Franklin est 100% unique et sans plagiat. L'IA s'appuie sur l'analyse SERP et vos instructions pour créer du contenu original qui respecte votre charte éditoriale et votre ton de voix.",
+          },
+          {
+            question: "Qu'est-ce que le score SEO en temps réel ?",
+            answer: "Le score SEO en temps réel évalue votre contenu sur 8 métriques clés pendant que vous écrivez : nombre de mots, structure des titres (H1/H2), densité de mots-clés, liens internes, placement des mots-clés et plus. Le score s'actualise instantanément pour vous guider vers un contenu parfaitement optimisé.",
+          },
+        ],
+      },
+    },
+    dataInsights: {
+      meta: {
+        title: 'Prenez des décisions basées sur les données | Asking Franklin',
+        description: 'Accédez à des analytics SEO complets, métriques de mots-clés, suivi de positionnement et données de performance AI Overview pour prendre des décisions éclairées.',
+      },
+      label: 'Analytics & Insights',
+      title: 'Prenez des décisions basées sur les données',
+      subtitle: "Arrêtez de deviner. Accédez à des analytics SEO complets, suivez vos positions dans la recherche traditionnelle ET les AI Overviews, et découvrez des opportunités de mots-clés inexploitées avec des insights data-driven.",
+      sections: [
+        {
+          icon: 'TrendingUp',
+          title: 'Valeur estimée du trafic (ETV)',
+          description: "Visualisez la valeur monétaire réelle de votre trafic organique. Suivez l'ETV sur tous vos mots-clés et pages positionnés pour comprendre quel contenu génère le plus d'impact business.",
+        },
+        {
+          icon: 'BarChart3',
+          title: 'Suivi de position & Buckets',
+          description: 'Surveillez vos classements à travers 12 buckets de position (Top 1, 2-3, 4-10, et au-delà). Suivez les mouvements semaine après semaine : nouveaux classements, améliorations, baisses et positions perdues.',
+        },
+        {
+          icon: 'Sparkles',
+          title: 'Performance AI Overview',
+          description: "Suivez votre présence dans les AI Overviews de Google séparément des classements organiques. Comprenez où votre contenu est cité par les résumés IA—une source de trafic croissante souvent négligée.",
+        },
+        {
+          icon: 'Users',
+          title: "Démographie de l'audience",
+          description: "Sachez qui recherche vos mots-clés. Accédez à la répartition par genre et par tranche d'âge (18-24, 25-34, 35-44, 45-54, 55-64) pour aligner votre contenu avec votre audience réelle.",
+        },
+        {
+          icon: 'Search',
+          title: 'Intelligence mots-clés',
+          description: "Obtenez des métriques complètes pour chaque mot-clé : volume de recherche, score de difficulté, niveau de concurrence, CPC, et notre Score d'Opportunité propriétaire qui équilibre potentiel et effort.",
+        },
+        {
+          icon: 'Lightbulb',
+          title: 'Recommandations de mots-clés intelligentes',
+          description: "Franklin suggère des mots-clés adaptés à votre domaine avec des scores de pertinence et un potentiel ETV attendu. Arrêtez de perdre du temps sur des mots-clés qui ne font pas avancer les choses.",
+        },
+        {
+          icon: 'PieChart',
+          title: "Distribution de l'intention de recherche",
+          description: "Visualisez comment votre portefeuille de mots-clés se répartit par intention : informationnelle, commerciale, transactionnelle et navigationnelle. Équilibrez votre stratégie de contenu en conséquence.",
+        },
+        {
+          icon: 'History',
+          title: 'Analyse des tendances historiques',
+          description: "Suivez votre progression SEO dans le temps avec des snapshots mensuels. Voyez comment votre autorité de domaine, valeur de trafic et classements évoluent. Identifiez ce qui fonctionne et doublez la mise.",
+        },
+      ],
+      cta: {
+        title: 'Débloquez vos données SEO',
+        description: 'Prenez chaque décision de contenu appuyée par des données réelles.',
+        button: 'Commencer votre essai gratuit',
+      },
+      faq: {
+        title: 'FAQ - Données & Insights SEO',
+        items: [
+          {
+            question: "Quelles métriques SEO Asking Franklin fournit-il ?",
+            answer: "Asking Franklin fournit plus de 100 métriques par domaine et 50 données par mot-clé, incluant : volume de recherche, score de difficulté, CPC, niveau de concurrence, Score d'Opportunité propriétaire, valeur estimée du trafic (ETV), distribution d'intention de recherche, et suivi de position sur 12 buckets (Top 1, 2-3, 4-10, etc.).",
+          },
+          {
+            question: "Comment fonctionne le suivi de position sur 12 buckets ?",
+            answer: "Le suivi de position répartit vos classements Google dans 12 tranches : Top 1, 2-3, 4-10, 11-20, 21-30, 31-40, 41-50, 51-60, 61-70, 71-80, 81-90, et 91-100. Chaque semaine, vous voyez les gains, les pertes, les nouvelles positions et les positions perdues pour chaque bucket.",
+          },
+          {
+            question: "Asking Franklin suit-il les AI Overviews de Google ?",
+            answer: "Oui, Asking Franklin suit séparément votre présence dans les AI Overviews de Google (anciennement SGE) en plus des classements organiques traditionnels. Cette fonctionnalité vous permet d'identifier où votre contenu est cité par les résumés IA — une source de trafic en forte croissance.",
+          },
+          {
+            question: "Comment le Score d'Opportunité est-il calculé ?",
+            answer: "Le Score d'Opportunité est un indicateur propriétaire qui équilibre le potentiel de trafic d'un mot-clé (volume de recherche, ETV) avec l'effort nécessaire pour se positionner (difficulté, concurrence). Plus le score est élevé, plus le rapport bénéfice/effort est favorable.",
+          },
+        ],
+      },
+    },
+    autopilot: {
+      meta: {
+        title: 'Autopilot - Génération de contenu automatisée | Asking Franklin',
+        description: 'Bientôt disponible : Génération et publication de contenu entièrement automatisées. Définissez votre stratégie et laissez Franklin gérer le reste.',
+      },
+      label: 'Bientôt disponible',
+      title: 'Mettez votre contenu en autopilot',
+      subtitle: "Définissez votre stratégie de contenu une fois, et laissez Franklin gérer l'exécution. Découverte automatique de mots-clés, génération de contenu et publication—tout cela pendant que vous vous concentrez sur ce qui compte vraiment.",
+      features: [
+        'Génération de contenu programmée basée sur votre stratégie de mots-clés',
+        'Publication automatique sur WordPress avec formatage parfait',
+        'Calendrier de contenu intelligent avec horaires de publication optimaux',
+        'Suggestions de maillage interne automatisées',
+        'Génération de contenu en masse pour les clusters de contenu',
+        'Synchronisation automatique avec votre CMS pour un workflow fluide',
+        'Recommandations de contenu basées sur la performance',
+        'Rafraîchissement automatique du contenu pour les articles obsolètes',
+      ],
+      cta: {
+        title: 'Soyez les premiers informés',
+        description: 'Autopilot arrive bientôt. Obtenez un accès anticipé lors du lancement.',
+        button: "Rejoindre la liste d'attente",
+      },
+      faq: {
+        title: 'FAQ - Autopilot',
+        items: [
+          {
+            question: "Quand la fonctionnalité Autopilot sera-t-elle disponible ?",
+            answer: "Autopilot est actuellement en développement. Inscrivez-vous à la liste d'attente pour être parmi les premiers informés du lancement et bénéficier d'un accès anticipé.",
+          },
+          {
+            question: "Que fera Autopilot concrètement ?",
+            answer: "Autopilot automatisera l'ensemble du workflow de création de contenu : découverte de mots-clés, génération d'articles optimisés SEO, publication automatique sur WordPress, suggestions de maillage interne, et rafraîchissement automatique des contenus obsolètes.",
+          },
+          {
+            question: "Autopilot remplacera-t-il le contrôle humain ?",
+            answer: "Non, Autopilot est conçu pour automatiser les tâches répétitives tout en vous laissant le contrôle total sur la stratégie, la validation et la personnalisation. Vous définissez les paramètres et Franklin exécute selon vos critères.",
+          },
+        ],
+      },
+    },
   },
 
   pricing: {
@@ -333,8 +539,8 @@ export const frContent: SiteContent = {
 
   terms: {
     meta: {
-      title: 'CGV - Asking Franklin',
-      description: "Conditions Générales de Vente",
+      title: 'CGV - Conditions Générales de Vente | Asking Franklin',
+      description: "Consultez les Conditions Générales de Vente d'Asking Franklin, l'assistant IA SEO. Modalités d'abonnement, crédits, facturation et politique d'essai gratuit de 7 jours.",
     },
     title: "Conditions Générales de Vente (CGV) – Asking Franklin",
     intro: "Dernière mise à jour : 16 novembre 2025",
@@ -392,8 +598,8 @@ export const frContent: SiteContent = {
 
   legalNotice: {
     meta: {
-      title: 'Mentions Légales - Asking Franklin',
-      description: 'Informations légales',
+      title: 'Mentions Légales - Asking Franklin | Assistant IA SEO',
+      description: "Mentions légales d'Asking Franklin : éditeur du site, hébergement, propriété intellectuelle et conditions d'utilisation de l'assistant IA SEO de création de contenu optimisé.",
     },
     title: 'Mentions Légales',
     sections: [
@@ -422,8 +628,8 @@ export const frContent: SiteContent = {
 
   privacyPolicy: {
     meta: {
-      title: 'Politique de Confidentialité - Asking Franklin',
-      description: 'Comment nous protégeons vos données',
+      title: 'Politique de Confidentialité - Asking Franklin | Protection des données',
+      description: "Découvrez comment Asking Franklin protège vos données personnelles. Politique de confidentialité conforme au RGPD : collecte, traitement, stockage et droits des utilisateurs de l'assistant IA SEO.",
     },
     title: 'Politique de Confidentialité d\'Asking Franklin',
     intro: 'Dernière mise à jour : 16 novembre 2025\n\nLa présente politique de confidentialité a pour objet d\'informer les utilisateurs de la manière dont Asking Franklin collecte, utilise, conserve et protège leurs données personnelles dans le cadre de l\'utilisation de l\'outil de génération de contenu optimisé pour le SEO et les LLMs.',
@@ -480,7 +686,7 @@ export const frContent: SiteContent = {
   },
 
   footer: {
-    description: "Asking Franklin c'est l'assistant IA qui booste la visibilité de vos contenus pour ranker dans les LLMs ET Google.",
+    description: "Asking Franklin, l'assistant IA SEO qui booste la visibilité de vos contenus pour ranker dans les LLMs ET Google. Analysez les intentions de recherche, rédigez du contenu optimisé et dominez les SERPs.",
     links: [
       {
         title: 'Produit',
