@@ -8,7 +8,7 @@ import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { NewsletterForm } from '@/components/NewsletterForm';
 import type { Language } from '@/lib/i18n';
 import type { SiteContent } from '@/content/types';
-import { ArrowRight, Search, Sparkles, Zap, MessageSquare, TrendingUp, Star, FileText, Bot, Rocket, Loader2, Mail } from 'lucide-react';
+import { ArrowRight, Search, Sparkles, Zap, MessageSquare, TrendingUp, Star, FileText, Bot, Rocket, Loader2 } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { useToast } from '@/hooks/use-toast';
 import quentinImage from '@/assets/quentin-barjon.jpeg';
@@ -953,78 +953,6 @@ export const Home = ({ lang, content }: HomeProps) => {
                 </ul>
               </div>
               <NewsletterForm lang={lang} />
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Newsletter CTA — Compact horizontal — FR only */}
-      {lang === 'fr' && (
-        <section className="py-16 border-t border-border">
-          <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <Card className="border-primary/20 shadow-lg" style={{ background: 'linear-gradient(135deg, hsl(263 70% 50% / 0.06), hsl(263 70% 60% / 0.14))' }}>
-                <CardContent className="py-8 px-8">
-                  <div className="flex flex-col lg:flex-row lg:items-center gap-6 lg:gap-10">
-                    {/* Left — Title + subtitle */}
-                    <div className="flex items-start gap-4 lg:flex-1 min-w-0">
-                      <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                        <Mail className="h-6 w-6 text-primary" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg md:text-xl font-bold leading-tight">
-                          Rejoignez + 1500 cadors du content IA
-                        </h3>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          Tips, hacks et stratégies SEO & IA chaque mois dans votre boîte mail.
-                        </p>
-                      </div>
-                    </div>
-
-                    {/* Right — Inline form */}
-                    <div className="lg:flex-1">
-                      <form
-                        onSubmit={async (e) => {
-                          e.preventDefault();
-                          const form = e.currentTarget;
-                          const formData = new FormData(form);
-                          const firstName = formData.get('firstName') as string;
-                          const emailVal = formData.get('email') as string;
-                          if (!firstName || !emailVal) return;
-                          try {
-                            const res = await fetch('/api/subscribe-newsletter', {
-                              method: 'POST',
-                              headers: { 'Content-Type': 'application/json' },
-                              body: JSON.stringify({ firstName, email: emailVal, lang }),
-                            });
-                            if (res.ok) form.reset();
-                          } catch (_) {}
-                        }}
-                        className="flex flex-col sm:flex-row gap-3"
-                      >
-                        <input
-                          type="text"
-                          name="firstName"
-                          placeholder="Prénom"
-                          className="px-4 py-2.5 rounded-lg border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring sm:w-32"
-                          required
-                        />
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          className="px-4 py-2.5 rounded-lg border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring flex-1"
-                          required
-                        />
-                        <Button type="submit" size="sm" className="whitespace-nowrap">
-                          S'inscrire
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </form>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </section>
