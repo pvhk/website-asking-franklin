@@ -1,9 +1,9 @@
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import type { Language } from '@/lib/i18n';
 import type { SiteContent } from '@/content/types';
 import { withBase } from '@/lib/baseUrl';
-import { ArrowRight, BookOpen, Clock } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 
 interface KnowledgeBaseProps {
   lang: Language;
@@ -12,104 +12,92 @@ interface KnowledgeBaseProps {
 
 export const KnowledgeBase = ({ lang, content }: KnowledgeBaseProps) => {
   const kb = content.knowledgeBase;
-  
+
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-hero py-16 md:py-20">
+      {/* Hero */}
+      <section className="py-24 md:py-32">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <Badge className="bg-accent text-accent-foreground border-0 px-4 py-1.5">
-              <BookOpen className="h-4 w-4 mr-2" />
-              {lang === 'fr' ? '📚 Centre de connaissances' : '📚 Knowledge Center'}
-            </Badge>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl">
+            <p className="section-label">
+              {lang === 'fr' ? 'Ressources' : 'Resources'}
+            </p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.05]">
               {kb.title}
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-xl text-muted-foreground">
               {kb.subtitle}
             </p>
           </div>
         </div>
       </section>
 
-      {/* Articles Grid */}
-      <section className="container py-16 md:py-20">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
+      {/* Articles */}
+      <section className="container pb-32">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {kb.articles.map((article) => {
             const articleUrl = withBase(
-              lang === 'fr' 
-                ? `/fr/base-de-connaissances/${article.slug}` 
+              lang === 'fr'
+                ? `/fr/base-de-connaissances/${article.slug}`
                 : `/knowledge-base/${article.slug}`
             );
-            
+
             return (
-              <Card
-                key={article.slug}
-                className="group hover:-translate-y-2 transition-all duration-300 hover:shadow-xl cursor-pointer border-border"
-              >
-                <a href={articleUrl} className="block">
+              <a key={article.slug} href={articleUrl} className="block group">
+                <Card className="h-full border-border hover-lift bg-card">
                   <CardHeader>
-                    <div className="flex items-center gap-2 mb-3">
-                      <Badge variant="secondary" className="text-xs">
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
                         {article.category}
-                      </Badge>
+                      </span>
                       {article.readTime && (
-                        <div className="flex items-center gap-1 text-xs text-muted-foreground">
+                        <span className="flex items-center gap-1 text-xs text-muted-foreground">
                           <Clock className="h-3 w-3" />
-                          <span>{article.readTime}</span>
-                        </div>
+                          {article.readTime}
+                        </span>
                       )}
                     </div>
-                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors">
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
                       {article.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <CardDescription className="text-sm leading-relaxed">
+                  <CardContent>
+                    <CardDescription className="leading-relaxed mb-4">
                       {article.excerpt}
                     </CardDescription>
-                    <div className="flex items-center justify-between pt-2">
+                    <div className="flex items-center justify-between">
                       <span className="text-xs text-muted-foreground">{article.date}</span>
                       <ArrowRight className="h-4 w-4 text-primary group-hover:translate-x-1 transition-transform" />
                     </div>
                   </CardContent>
-                </a>
-              </Card>
+                </Card>
+              </a>
             );
           })}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="bg-gradient-primary text-primary-foreground">
-        <div className="container py-16 md:py-20">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              {lang === 'fr'
-                ? 'Prêt à créer du contenu qui performe ?'
-                : 'Ready to create content that performs?'}
+      {/* CTA */}
+      <section className="bg-foreground text-background">
+        <div className="container py-32">
+          <div className="max-w-3xl mx-auto text-center space-y-8">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              {lang === 'fr' ? 'Prêt à créer du contenu ?' : 'Ready to create content?'}
             </h2>
-            <p className="text-lg text-primary-foreground/90">
+            <p className="text-xl text-background/70">
               {lang === 'fr'
-                ? 'Essayez Asking Franklin gratuitement pendant 7 jours.'
-                : 'Try Asking Franklin free for 7 days.'}
+                ? 'Essayez Asking Franklin gratuitement.'
+                : 'Try Asking Franklin for free.'}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://app.askingfranklin.com/register"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground rounded-lg font-semibold hover:bg-secondary/90 transition-colors shadow-xl"
-              >
+            <Button size="lg" variant="secondary" className="h-14 px-10 rounded-full group" asChild>
+              <a href="https://app.askingfranklin.com/register" target="_blank" rel="noopener noreferrer">
                 {lang === 'fr' ? 'Commencer gratuitement' : 'Start free trial'}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 btn-arrow" />
               </a>
-            </div>
+            </Button>
           </div>
         </div>
       </section>
     </>
   );
 };
-

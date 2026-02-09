@@ -17,6 +17,11 @@ const content = getContent(lang);
     description: plan.description,
     price: plan.price
   }))}
+  faqData={content.pricing.faq.items}
+  breadcrumbs={[
+    { name: 'Home', url: 'https://www.askingfranklin.com/' },
+    { name: 'Pricing' },
+  ]}
 >
   <Pricing lang={lang} content={content} client:load />
 </BaseLayout>

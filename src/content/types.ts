@@ -67,6 +67,32 @@ export interface LegalSection {
   content: string;
 }
 
+export interface FeatureSection {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface FeaturePage {
+  meta: { title: string; description: string; };
+  label: string;
+  title: string;
+  subtitle: string;
+  sections: FeatureSection[];
+  cta: { title: string; description: string; button: string; };
+  faq?: { title: string; items: FAQItem[]; };
+}
+
+export interface ComingSoonPage {
+  meta: { title: string; description: string; };
+  label: string;
+  title: string;
+  subtitle: string;
+  features: string[];
+  cta: { title: string; description: string; button: string; };
+  faq?: { title: string; items: FAQItem[]; };
+}
+
 export interface SiteContent {
   siteName: string;
   siteDescription: string;
@@ -77,6 +103,11 @@ export interface SiteContent {
     knowledge: string;
     laDepeche: string;
     cta: string;
+  };
+  features: {
+    optimizedContent: FeaturePage;
+    dataInsights: FeaturePage;
+    autopilot: ComingSoonPage;
   };
   home: {
     meta: { title: string; description: string; };

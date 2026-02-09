@@ -2,7 +2,7 @@ import type { SiteContent } from './types';
 
 export const enContent: SiteContent = {
   siteName: 'Asking Franklin',
-  siteDescription: 'AI Assistant for SEO Content',
+  siteDescription: 'AI SEO Assistant for writing optimized content for Google and AI engines',
 
   nav: {
     home: 'Home',
@@ -15,12 +15,12 @@ export const enContent: SiteContent = {
 
   home: {
     meta: {
-      title: 'Asking Franklin - The best AI assistant for writing your SEO content',
-      description: 'The AI SEO writing assistant that analyzes what your customers are really searching for, detects untapped opportunities, and helps you create content that ranks in Google AND becomes a reference source for generative AI.',
+      title: 'Asking Franklin - The Best AI SEO Assistant That Writes Content That Ranks',
+      description: 'Asking Franklin is the AI SEO assistant that analyzes your customers\' search intent, detects untapped keyword opportunities, and writes optimized content that ranks on Google and generative AI engines. Free 7-day trial.',
     },
     hero: {
-      title: 'The best AI assistant for writing your SEO content',
-      subtitle: "Spending hours creating content... without generating the traffic you deserve? Asking Franklin is the AI SEO writing assistant that changes the game. Our tool analyzes what your customers are really searching for, detects untapped opportunities, and helps you create content that ranks in Google AND becomes a reference source for generative AI like ChatGPT, Perplexity, and Gemini.",
+      title: 'The AI SEO Assistant that grows your SEO & GEO traffic',
+      subtitle: "Spending hours creating content... without generating the traffic you deserve? Asking Franklin is the AI SEO assistant that analyzes what your customers search for and creates content optimized for Google and generative AI engines like ChatGPT, Perplexity, and Gemini.",
       cta: "Try it for free",
     },
     testimonials: {
@@ -29,24 +29,24 @@ export const enContent: SiteContent = {
       items: [
         {
           name: 'Quentin BARJON',
-          role: 'CMO',
-          company: 'JDC sA',
+          role: 'CMO JDC SA',
+          company: 'JDC SA',
           content: "Asking Franklin has quickly become essential for our SEO strategy. The tool is simple, clear and super practical: it analyzes your keywords, takes them into account and writes optimized and structured content for you. A real time saver on a daily basis.",
           rating: 5,
           image: 'quentin-barjon',
         },
         {
           name: 'Marlet KERVOLIN',
-          role: 'CEO',
-          company: 'Kaboom Kitchen',
+          role: 'CEO MEMORI Agency',
+          company: 'MEMORI Agency',
           content: "Asking Franklin is perfect for saving time on blog article writing. I no longer need to spend hours to get quality articles, the AI allows me to have coherent and relevant text for my niche, much faster. The tool also helps me with keyword research so I know I'm writing on topics my target audience is searching for.",
           rating: 5,
           image: 'marlet-kervolin',
         },
         {
           name: 'Benoit GAILLAT',
-          role: 'CEO',
-          company: 'Agence Pikka',
+          role: 'CEO Pikka Agency',
+          company: 'Pikka Agency',
           content: "The Asking Franklin tool is a real assistant that helps me write quality content that ranks. Having the ability to provide precise instructions about my targets and context is really game-changing for me!",
           rating: 5,
           image: 'benoit-gaillat',
@@ -58,32 +58,18 @@ export const enContent: SiteContent = {
       anchor: 'blog',
       items: [
         {
-          title: 'Top 10 essential web writing techniques in 2025',
-          excerpt: 'Discover the 10 essential techniques to create high-performing and engaging web content in 2025.',
+          title: 'SEO Content Writer: What It Is and How to Excel in 2026',
+          excerpt: 'Learn what an SEO content writer does, the skills you need, and how to master the craft to rank higher and drive organic traffic.',
           image: 'top-10-techniques-redaction-web',
-          url: 'https://blog.askingfranklin.com/top-10-des-techniques-de-redaction-web-incontournables-2025/',
-          date: 'October 11, 2025',
-        },
-        {
-          title: '3 secrets to becoming an excellent writer in 2025',
-          excerpt: 'Essential keys to developing your web writing skills and standing out from the crowd.',
-          image: '3-secrets-excellent-redacteur',
-          url: 'https://blog.askingfranklin.com/3-secrets-pour-devenir-un-excellent-redacteur/',
-          date: 'August 25, 2025',
-        },
-        {
-          title: '3 simple steps for content that engages and converts your audience',
-          excerpt: 'Learn to create captivating content that transforms your visitors into loyal customers.',
-          image: '3-etapes-contenu-engage',
-          url: 'https://blog.askingfranklin.com/3-etapes-simples-pour-un-contenu-qui-engage-et-convertit-votre-audience/',
-          date: 'November 17, 2021',
+          url: 'https://blog.askingfranklin.com/en/seo-content-writer-what-it-is-and-how-to-excel-in-2026/',
+          date: 'February 2026',
         },
       ],
       cta: 'View all articles',
     },
     howItWorks: {
       title: 'Ok, so how does it actually work?',
-      subtitle: 'Asking Franklin boosts your content visibility by combining search intent analysis, SERP analysis, competition analysis, and SEO optimization to rank in LLMs AND Google.',
+      subtitle: 'Asking Franklin, your AI SEO assistant, boosts your content visibility by combining search intent analysis, SERP analysis, competition analysis, and SEO & GEO optimization to rank in LLMs AND Google.',
       anchor: 'how-it-works',
       features: [
         {
@@ -156,24 +142,28 @@ export const enContent: SiteContent = {
       anchor: 'faq',
       items: [
         {
-          question: "Can I use the tool for free?",
-          answer: "Yes, you can create an account to test the tool for free for 7 days.",
+          question: "What is an AI SEO assistant like Asking Franklin?",
+          answer: "Asking Franklin is an AI SEO assistant that combines artificial intelligence with search engine analysis to help you create optimized content. The tool analyzes search intent, SERPs, competition, and writes articles optimized for Google and generative AI engines like ChatGPT, Perplexity, and Gemini.",
+        },
+        {
+          question: "Can I use the AI SEO assistant for free?",
+          answer: "Yes, you can create an account to test the AI SEO assistant Asking Franklin for free for 7 days, with no credit card required.",
         },
         {
           question: "Can Asking Franklin help me even if I'm not inspired or skilled at writing?",
-          answer: "That's one of the tool's strengths. Simply type in the keyword you want to write content about, and Asking Franklin will show you everything internet users are searching for on that topic. But also search volumes, competition, and related keywords.",
+          answer: "That's one of the key strengths of this AI SEO assistant. Simply type in the keyword you want to write content about, and Asking Franklin will analyze everything users are searching for on that topic: search volumes, competition, related keywords, and search intent.",
         },
         {
           question: "Why is Asking Franklin different from other AI-assisted content writing tools?",
-          answer: "One of the main strengths of the tool lies in its conversational ability. You can bring your expertise to the subject at any stage of creating your content. Give precise instructions, details about your targets, the tone to adopt... Asking Franklin will take it into account and learn as it goes.",
+          answer: "One of the main strengths of this AI SEO assistant lies in its conversational ability. You can bring your expertise to the subject at any stage of creating your content. Give precise instructions, details about your targets, the tone to adopt... Asking Franklin will take it into account and learn as it goes.",
         },
         {
-          question: 'Are AI-generated contents penalized?',
-          answer: "AI-generated content is not penalized by default if it provides real expertise and verified information. It must genuinely answer the questions internet users are asking.",
+          question: 'Is content generated by an AI SEO assistant penalized by Google?',
+          answer: "No, AI-generated content is not penalized by default by Google if it provides real expertise and verified information. The AI SEO assistant Asking Franklin integrates E-E-A-T optimizations (Experience, Expertise, Authoritativeness, Trustworthiness) to ensure the quality and ranking of your content.",
         },
         {
           question: "What differentiates Asking Franklin from other AI-automated writing tools?",
-          answer: "Asking Franklin can automate the creation of your content, whether you have no idea or already have a well-established content marketing strategy. But AI alone has its limits, which is why you always have the pen on your content. Franklin then becomes a real assistant that will draw on the knowledge and instructions you provide to meet your writing needs!",
+          answer: "Asking Franklin is a complete AI SEO assistant that goes beyond simple text generation. It can automate your content creation while combining SERP analysis, search intent detection, and SEO & GEO optimization. AI alone has its limits, which is why you always keep the pen on your content. Franklin becomes a real assistant that draws on your knowledge and instructions to meet your writing needs.",
         },
       ],
     },
@@ -204,6 +194,208 @@ export const enContent: SiteContent = {
         readTime: '3 min read',
       },
     ],
+  },
+
+  features: {
+    optimizedContent: {
+      meta: {
+        title: 'Write Optimized Content - SEO & GEO | Asking Franklin',
+        description: 'Create content that ranks on Google AND gets cited by AI assistants like ChatGPT, Perplexity, and Gemini. AI-powered SEO and GEO optimization.',
+      },
+      label: 'SEO & GEO Optimization',
+      title: 'Write content that ranks everywhere',
+      subtitle: "Create articles optimized for both traditional search engines (SEO) and generative AI engines (GEO). Your content becomes a reference source for Google, ChatGPT, Perplexity, Claude, and Gemini.",
+      sections: [
+        {
+          icon: 'Search',
+          title: 'SERP Analysis of Top 10 Competitors',
+          description: 'Franklin automatically analyzes the top 10 ranking pages for your keyword. It extracts their structure, content length, headings, and semantic patterns to understand exactly what Google rewards.',
+        },
+        {
+          icon: 'Target',
+          title: 'Search Intent Detection',
+          description: 'Understand whether users are looking for information, comparing products, or ready to buy. Franklin identifies the primary search intent and structures your content to match user expectations.',
+        },
+        {
+          icon: 'BarChart3',
+          title: 'Real-Time SEO Score',
+          description: 'Get instant feedback on 8 key SEO metrics as you write: word count, heading structure, keyword density, internal links, keyword placement in H1/H2, and more. Watch your score improve in real-time.',
+        },
+        {
+          icon: 'Sparkles',
+          title: 'AI-Powered Content Generation',
+          description: 'From keyword to published article in minutes. Franklin generates a detailed content plan based on SERP analysis, then writes SEO-optimized content with proper heading hierarchy and semantic keywords.',
+        },
+        {
+          icon: 'MessageSquare',
+          title: 'Conversational AI Editor',
+          description: 'Edit your content through natural conversation. Ask Franklin to expand a section, change the tone, add examples, or rewrite paragraphs. Your expertise combined with AI efficiency.',
+        },
+        {
+          icon: 'FileText',
+          title: 'Meta Tags Generation',
+          description: 'Automatically generate optimized meta titles and descriptions that drive clicks. Franklin follows SEO best practices for character limits and keyword placement.',
+        },
+        {
+          icon: 'Palette',
+          title: 'Custom Tone of Voice',
+          description: 'Define your brand voice and Franklin adapts. Whether formal, conversational, technical, or friendly—your content stays consistent with your brand identity.',
+        },
+        {
+          icon: 'Globe',
+          title: 'Multi-Language Support',
+          description: 'Create optimized content in multiple languages. Franklin adapts SEO strategies for different markets and search behaviors.',
+        },
+      ],
+      cta: {
+        title: 'Start writing content that ranks',
+        description: 'Join thousands of marketers creating SEO-optimized content with Franklin.',
+        button: 'Try free for 7 days',
+      },
+      faq: {
+        title: 'FAQ - SEO & GEO Optimized Content',
+        items: [
+          {
+            question: "How does Asking Franklin optimize content for SEO and GEO?",
+            answer: "Asking Franklin combines SERP analysis of the top 10 Google results with GEO (Generative Engine Optimization). The tool analyzes the structure, length, and semantic patterns of top-ranking content, then generates articles optimized to rank on Google and be cited by generative AI engines like ChatGPT, Perplexity, and Gemini.",
+          },
+          {
+            question: "How long does it take to generate an optimized article with Asking Franklin?",
+            answer: "The complete process — from search intent analysis to SEO-optimized content generation — takes between 2 and 8 minutes. You can then customize the content via the conversational Franklin Assistant to add your domain expertise.",
+          },
+          {
+            question: "Is Asking Franklin compatible with WordPress?",
+            answer: "Yes, Asking Franklin integrates directly with WordPress. You can export your articles with one click with perfect formatting, preserving all SEO tags, HTML structure, headings, lists, and internal links.",
+          },
+          {
+            question: "Does Asking Franklin's AI generate unique content?",
+            answer: "Yes, every article generated by Asking Franklin is 100% unique and plagiarism-free. The AI leverages SERP analysis and your instructions to create original content that respects your editorial guidelines and tone of voice.",
+          },
+          {
+            question: "What is the real-time SEO score?",
+            answer: "The real-time SEO score evaluates your content on 8 key metrics as you write: word count, heading structure (H1/H2), keyword density, internal links, keyword placement, and more. The score updates instantly to guide you toward perfectly optimized content.",
+          },
+        ],
+      },
+    },
+    dataInsights: {
+      meta: {
+        title: 'Make Decisions on Data | Asking Franklin',
+        description: 'Access comprehensive SEO analytics, keyword metrics, ranking tracking, and AI Overview performance data to make informed content decisions.',
+      },
+      label: 'Analytics & Insights',
+      title: 'Make decisions based on real data',
+      subtitle: "Stop guessing. Access comprehensive SEO analytics, track your rankings across traditional search AND AI Overviews, and discover untapped keyword opportunities with data-driven insights.",
+      sections: [
+        {
+          icon: 'TrendingUp',
+          title: 'Estimated Traffic Value (ETV)',
+          description: 'See the real monetary value of your organic traffic. Track ETV across all your ranked keywords and pages to understand which content drives the most business impact.',
+        },
+        {
+          icon: 'BarChart3',
+          title: 'Position Tracking & Buckets',
+          description: 'Monitor your rankings across 12 position buckets (Top 1, 2-3, 4-10, and beyond). Track movements week-over-week: new rankings, improvements, drops, and lost positions.',
+        },
+        {
+          icon: 'Sparkles',
+          title: 'AI Overview Performance',
+          description: "Track your presence in Google's AI Overviews separately from organic rankings. Understand where your content gets cited by AI summaries—a growing traffic source often overlooked.",
+        },
+        {
+          icon: 'Users',
+          title: 'Audience Demographics',
+          description: 'Know who searches for your keywords. Access gender distribution and age breakdown (18-24, 25-34, 35-44, 45-54, 55-64) to align your content with your actual audience.',
+        },
+        {
+          icon: 'Search',
+          title: 'Keyword Intelligence',
+          description: 'Get comprehensive metrics for every keyword: search volume, difficulty score, competition level, CPC, and our proprietary Opportunity Score that balances potential vs. effort.',
+        },
+        {
+          icon: 'Lightbulb',
+          title: 'Smart Keyword Recommendations',
+          description: 'Franklin suggests keywords tailored to your domain with relevance scores and expected ETV potential. Stop wasting time on keywords that won\'t move the needle.',
+        },
+        {
+          icon: 'PieChart',
+          title: 'Search Intent Distribution',
+          description: 'Visualize how your keyword portfolio breaks down by intent: informational, commercial, transactional, and navigational. Balance your content strategy accordingly.',
+        },
+        {
+          icon: 'History',
+          title: 'Historical Trend Analysis',
+          description: 'Track your SEO progress over time with monthly snapshots. See how your domain authority, traffic value, and rankings evolve. Identify what\'s working and double down.',
+        },
+      ],
+      cta: {
+        title: 'Unlock your SEO data',
+        description: 'Make every content decision backed by real data.',
+        button: 'Start your free trial',
+      },
+      faq: {
+        title: 'FAQ - SEO Data & Insights',
+        items: [
+          {
+            question: "What SEO metrics does Asking Franklin provide?",
+            answer: "Asking Franklin provides over 100 metrics per domain and 50 data points per keyword, including: search volume, difficulty score, CPC, competition level, proprietary Opportunity Score, estimated traffic value (ETV), search intent distribution, and position tracking across 12 buckets (Top 1, 2-3, 4-10, etc.).",
+          },
+          {
+            question: "How does the 12-bucket position tracking work?",
+            answer: "Position tracking distributes your Google rankings into 12 ranges: Top 1, 2-3, 4-10, 11-20, 21-30, 31-40, 41-50, 51-60, 61-70, 71-80, 81-90, and 91-100. Each week, you see gains, losses, new positions, and lost positions for each bucket.",
+          },
+          {
+            question: "Does Asking Franklin track Google AI Overviews?",
+            answer: "Yes, Asking Franklin separately tracks your presence in Google AI Overviews (formerly SGE) in addition to traditional organic rankings. This feature lets you identify where your content gets cited by AI summaries — a fast-growing traffic source.",
+          },
+          {
+            question: "How is the Opportunity Score calculated?",
+            answer: "The Opportunity Score is a proprietary indicator that balances a keyword's traffic potential (search volume, ETV) with the effort required to rank (difficulty, competition). The higher the score, the more favorable the benefit-to-effort ratio.",
+          },
+        ],
+      },
+    },
+    autopilot: {
+      meta: {
+        title: 'Autopilot - Automated Content Generation | Asking Franklin',
+        description: 'Coming soon: Fully automated content generation and publishing. Set your strategy and let Franklin handle the rest.',
+      },
+      label: 'Coming Soon',
+      title: 'Put your content on autopilot',
+      subtitle: "Set your content strategy once, and let Franklin handle the execution. Automated keyword discovery, content generation, and publishing—all while you focus on what matters most.",
+      features: [
+        'Scheduled content generation based on your keyword strategy',
+        'Automatic WordPress publishing with perfect formatting',
+        'Smart content calendar with optimal posting times',
+        'Automated internal linking suggestions',
+        'Bulk content generation for content clusters',
+        'Auto-sync with your CMS for seamless workflow',
+        'Performance-based content recommendations',
+        'Automated content refresh for outdated articles',
+      ],
+      cta: {
+        title: 'Be the first to know',
+        description: 'Autopilot is coming soon. Get early access when we launch.',
+        button: 'Join the waitlist',
+      },
+      faq: {
+        title: 'FAQ - Autopilot',
+        items: [
+          {
+            question: "When will the Autopilot feature be available?",
+            answer: "Autopilot is currently in development. Sign up for the waitlist to be among the first notified of the launch and get early access.",
+          },
+          {
+            question: "What will Autopilot do exactly?",
+            answer: "Autopilot will automate the entire content creation workflow: keyword discovery, SEO-optimized article generation, automatic WordPress publishing, internal linking suggestions, and automated content refresh for outdated articles.",
+          },
+          {
+            question: "Will Autopilot replace human control?",
+            answer: "No, Autopilot is designed to automate repetitive tasks while giving you full control over strategy, validation, and customization. You set the parameters and Franklin executes according to your criteria.",
+          },
+        ],
+      },
+    },
   },
 
   pricing: {
@@ -333,8 +525,8 @@ export const enContent: SiteContent = {
 
   terms: {
     meta: {
-      title: 'Terms of Sale - Asking Franklin',
-      description: 'Terms and Conditions of Sale',
+      title: 'Terms of Sale - Asking Franklin | AI SEO Assistant',
+      description: "Read Asking Franklin's Terms and Conditions of Sale. Subscription plans, credits, billing details, and 7-day free trial policy for the AI-powered SEO content creation assistant.",
     },
     title: "Terms and Conditions of Sale – Asking Franklin",
     intro: "Last updated: November 16, 2025",
@@ -392,8 +584,8 @@ export const enContent: SiteContent = {
 
   legalNotice: {
     meta: {
-      title: 'Legal Notice - Asking Franklin',
-      description: 'Legal information',
+      title: 'Legal Notice - Asking Franklin | AI SEO Assistant',
+      description: "Legal notice for Asking Franklin: site publisher, hosting, intellectual property, and terms of use for the AI-powered SEO content creation assistant.",
     },
     title: 'Legal Notice',
     sections: [
@@ -422,8 +614,8 @@ export const enContent: SiteContent = {
 
   privacyPolicy: {
     meta: {
-      title: 'Privacy Policy - Asking Franklin',
-      description: 'How we protect your data',
+      title: 'Privacy Policy - Asking Franklin | Data Protection',
+      description: "Learn how Asking Franklin protects your personal data. GDPR-compliant privacy policy covering data collection, processing, storage, and user rights for the AI SEO assistant.",
     },
     title: 'Asking Franklin Privacy Policy',
     intro: 'Last updated: November 16, 2025\n\nThis privacy policy aims to inform users how Asking Franklin collects, uses, stores, and protects their personal data when using the content generation tool optimized for SEO and LLMs.',
@@ -480,7 +672,7 @@ export const enContent: SiteContent = {
   },
 
   footer: {
-    description: 'Asking Franklin is the AI assistant that boosts your content visibility to rank in LLMs AND Google.',
+    description: 'Asking Franklin, the AI SEO assistant that boosts your content visibility to rank in LLMs AND Google. Analyze search intent, write optimized content, and dominate the SERPs.',
     links: [
       {
         title: 'Product',
@@ -488,7 +680,7 @@ export const enContent: SiteContent = {
           { label: 'Home', href: '/' },
           { label: 'Pricing', href: '/pricing' },
           { label: 'Knowledge Base', href: '/knowledge-base' },
-          { label: 'Blog', href: 'https://blog.askingfranklin.com/' },
+          { label: 'Blog', href: 'https://blog.askingfranklin.com/en/' },
         ],
       },
       {

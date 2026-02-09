@@ -2,64 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* EchoNode-inspired design system with purple primary */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 271 55% 28%;
+    /* Warm beige background like EchoNode (#f5f0e8) */
+    --background: 37 38% 94%;
+    --foreground: 260 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 271 55% 28%;
+    /* Lighter beige for cards */
+    --card: 40 40% 98%;
+    --card-foreground: 260 20% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 271 55% 28%;
+    --popover-foreground: 260 20% 15%;
 
-    --primary: 349 79% 60%;
+    /* Purple primary: rgb(109, 40, 217) = hsl(263, 70%, 50%) */
+    --primary: 263 70% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 349 79% 72%;
+    --primary-hover: 263 70% 45%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 271 55% 28%;
+    /* Warm secondary */
+    --secondary: 37 30% 90%;
+    --secondary-foreground: 260 20% 15%;
 
-    --muted: 240 4% 96%;
-    --muted-foreground: 271 30% 50%;
+    --muted: 37 20% 88%;
+    --muted-foreground: 260 15% 40%;
 
-    --accent: 349 79% 96%;
-    --accent-foreground: 349 79% 60%;
+    --accent: 263 40% 95%;
+    --accent-foreground: 263 70% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 240 6% 92%;
-    --input: 240 6% 92%;
-    --ring: 349 79% 60%;
+    /* EchoNode-style borders */
+    --border: 37 20% 85%;
+    --border-dark: 260 20% 20%;
+    --input: 37 20% 85%;
+    --ring: 263 70% 50%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(349 79% 60%), hsl(349 79% 72%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(349 79% 98%));
-    --gradient-accent: linear-gradient(135deg, hsl(349 79% 96%), hsl(271 55% 98%));
-
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-    --shadow-primary: 0 10px 40px -10px hsl(349 79% 60% / 0.3);
-    --shadow-glow: 0 0 40px hsl(349 79% 72% / 0.2);
+    /* Clean shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+    --shadow-md: 0 4px 12px -2px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 12px 32px -8px rgb(0 0 0 / 0.08);
+    --shadow-xl: 0 24px 48px -12px rgb(0 0 0 / 0.1);
+    --shadow-lift: 0 12px 24px -8px rgb(0 0 0 / 0.1);
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 271 55% 28%;
-    --sidebar-primary: 271 55% 28%;
+    --sidebar-foreground: 260 20% 15%;
+    --sidebar-primary: 260 20% 15%;
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 271 55% 28%;
+    --sidebar-accent-foreground: 260 20% 15%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 349 79% 60%;
+    --sidebar-ring: 263 70% 50%;
   }
 
   .dark {
@@ -72,9 +70,9 @@ All colors MUST be HSL.
     --popover: 240 8% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 349 79% 62%;
+    --primary: 263 70% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 349 79% 75%;
+    --primary-hover: 263 70% 55%;
 
     --secondary: 240 5% 16%;
     --secondary-foreground: 0 0% 98%;
@@ -89,30 +87,24 @@ All colors MUST be HSL.
     --destructive-foreground: 0 0% 98%;
 
     --border: 240 5% 20%;
+    --border-dark: 240 5% 40%;
     --input: 240 5% 20%;
-    --ring: 345 85% 62%;
+    --ring: 263 70% 60%;
 
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(349 79% 62%), hsl(349 79% 75%));
-    --gradient-hero: linear-gradient(180deg, hsl(240 10% 8%), hsl(240 8% 12%));
-    --gradient-accent: linear-gradient(135deg, hsl(349 79% 15%), hsl(240 8% 12%));
-
-    /* Dark mode shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3);
     --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3);
-    --shadow-primary: 0 10px 40px -10px hsl(349 79% 62% / 0.5);
-    --shadow-glow: 0 0 60px hsl(349 79% 75% / 0.3);
+    --shadow-lift: 0 12px 24px -8px rgb(0 0 0 / 0.3);
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 349 79% 62%;
+    --sidebar-primary: 263 70% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 349 79% 62%;
+    --sidebar-ring: 263 70% 60%;
   }
 }
 
@@ -123,10 +115,52 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Instrument Serif for hero titles */
+  .font-hero {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  /* Caveat handwritten font */
+  .font-handwritten {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
   }
 }
 
 @layer utilities {
+  /* EchoNode-style hover lift */
+  .hover-lift {
+    transition: all 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: hsl(var(--border-dark));
+  }
+
+  /* Dropdown arrow rotation */
+  .dropdown-arrow {
+    transition: transform 0.3s ease;
+  }
+  .group:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Button arrow animation */
+  .btn-arrow {
+    transition: transform 0.25s ease;
+  }
+  .group:hover .btn-arrow,
+  a:hover .btn-arrow,
+  button:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
   @keyframes scroll {
     0% {
       transform: translateX(0);
@@ -139,7 +173,7 @@ All colors MUST be HSL.
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(40px);
     }
     to {
       opacity: 1;
@@ -156,8 +190,37 @@ All colors MUST be HSL.
     }
   }
 
+  @keyframes floatSlow {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(3deg);
+    }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 35s linear infinite;
   }
 
   .animate-scroll:hover {
@@ -165,30 +228,178 @@ All colors MUST be HSL.
   }
 
   .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease-out;
+    animation: fadeInUp 1s ease-out;
   }
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
 
-  .gradient-primary {
-    background: var(--gradient-primary);
+  .animate-float-slow {
+    animation: floatSlow 10s ease-in-out infinite;
   }
 
-  .gradient-hero {
-    background: var(--gradient-hero);
+  .animate-pulse-soft {
+    animation: pulse-soft 5s ease-in-out infinite;
   }
 
-  .gradient-accent {
-    background: var(--gradient-accent);
+  /* Logo grayscale effect like EchoNode */
+  .logo-grayscale {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+  .logo-grayscale:hover {
+    filter: grayscale(0%);
+    opacity: 1;
   }
 
-  .shadow-primary {
-    box-shadow: var(--shadow-primary);
+  /* Section label like EchoNode */
+  .section-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: hsl(var(--primary));
+    font-weight: 600;
   }
 
-  .shadow-glow {
-    box-shadow: var(--shadow-glow);
+  /* Step number styling - monospace like EchoNode */
+  .step-number {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: hsl(var(--primary));
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(263 70% 50%), hsl(263 70% 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Live signal dot — pulsing ring effect (rose/destructive) */
+  .signal-dot {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: hsl(var(--destructive));
+  }
+
+  .signal-dot::before,
+  .signal-dot::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background-color: hsl(var(--destructive));
+    animation: signal-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .signal-dot::after {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes signal-ping {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    75%, 100% {
+      transform: scale(3);
+      opacity: 0;
+    }
+  }
+
+  /* Hero background animation - floating dots */
+  .hero-bg-animation {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  /* =========================================
+     Sticky Scroll — layout shift on scroll
+     Smoothly morphs from centered hero to two columns
+     ========================================= */
+
+  .sticky-scroll-wrapper {
+    --layout-progress: 0;
+    --layout-inverse: 1;
+    display: grid;
+    grid-template-columns: minmax(0, calc(100% - (var(--layout-progress) * 40%))) minmax(0, calc(var(--layout-progress) * 40%));
+    align-items: start;
+  }
+
+  .sticky-scroll-wrapper .sidebar-left {
+    position: sticky;
+    top: 120px;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+    transform: translateY(calc(var(--layout-inverse) * -12px));
+    transition: transform 0.12s linear;
+    will-change: transform;
+  }
+
+  .sticky-scroll-wrapper .content-right {
+    padding-left: calc(var(--layout-progress) * 56px);
+    opacity: var(--layout-progress);
+    min-width: 0;
+    transform: translateX(calc(var(--layout-inverse) * 48px)) translateY(calc(var(--layout-inverse) * 8px));
+    transition: transform 0.12s linear, opacity 0.12s linear, padding-left 0.12s linear;
+    will-change: transform, opacity, padding-left;
+  }
+
+  .sticky-scroll-wrapper[data-layout='center'] .sidebar-left {
+    text-align: center;
+  }
+
+  .sticky-scroll-wrapper[data-layout='split'] .sidebar-left {
+    text-align: left;
+  }
+
+  .sticky-scroll-wrapper[data-lock-right='true'] .content-right {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    overflow: visible;
+  }
+
+  .sticky-scroll-wrapper .content-right table th,
+  .sticky-scroll-wrapper .content-right table td {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .sticky-scroll-wrapper .content-right thead img {
+    height: 2rem;
+  }
+
+  @media (max-width: 1024px) {
+    .sticky-scroll-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .sticky-scroll-wrapper .sidebar-left {
+      position: static;
+      max-width: none;
+      margin: 0;
+      transform: none;
+      text-align: left;
+    }
+
+    .sticky-scroll-wrapper .content-right {
+      padding-left: 0;
+      opacity: 1;
+      transform: none;
+    }
   }
 }

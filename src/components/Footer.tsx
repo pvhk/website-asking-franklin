@@ -8,8 +8,8 @@ interface FooterProps {
 
 export const Footer = ({ content }: FooterProps) => {
   return (
-    <footer className="border-t border-border bg-gradient-accent">
-      <div className="container py-16 md:py-20">
+    <footer className="border-t border-border">
+      <div className="container py-20 md:py-24">
         <div className="grid gap-12 md:grid-cols-4">
           <div className="md:col-span-1 space-y-4">
             <img src={withBaseImage('/logo.svg')} alt={content.siteName} className="h-12 md:h-14 w-auto mb-4" />
