@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import type { Language } from '@/lib/i18n';
 import type { SiteContent } from '@/content/types';
-import { Menu, X, ChevronDown, Sparkles, Zap, BookOpen, FileText, PenTool, BarChart3, Rocket, Search } from 'lucide-react';
+import { Menu, X, ChevronDown, Sparkles, Zap, BookOpen, FileText, PenTool, BarChart3, Rocket, Search, Eye, Code, Wrench } from 'lucide-react';
 import { useState } from 'react';
 import { withBase, withBaseImage } from '@/lib/baseUrl';
 
@@ -40,7 +40,32 @@ export const Header = ({ lang, content }: HeaderProps) => {
     },
   ];
 
-  const freeToolsUrl = withBase(lang === 'fr' ? '/fr/outils-gratuits/google-suggests' : '/free-tools/google-suggests');
+  const freeToolsDropdownItems = [
+    {
+      icon: Search,
+      title: 'Google Suggests',
+      description: lang === 'fr' ? 'Suggestions de mots-cl\u00e9s' : 'Keyword suggestions',
+      href: withBase(lang === 'fr' ? '/fr/outils-gratuits/google-suggests' : '/free-tools/google-suggests'),
+    },
+    {
+      icon: Eye,
+      title: lang === 'fr' ? 'Aper\u00e7u SERP' : 'SERP Preview',
+      description: lang === 'fr' ? 'Pr\u00e9visualisez vos meta tags' : 'Preview your meta tags',
+      href: withBase(lang === 'fr' ? '/fr/outils-gratuits/apercu-serp' : '/free-tools/serp-preview'),
+    },
+    {
+      icon: FileText,
+      title: lang === 'fr' ? 'Compteur de mots' : 'Word Counter',
+      description: lang === 'fr' ? 'Analysez votre contenu' : 'Analyze your content',
+      href: withBase(lang === 'fr' ? '/fr/outils-gratuits/compteur-de-mots' : '/free-tools/word-counter'),
+    },
+    {
+      icon: Code,
+      title: lang === 'fr' ? 'G\u00e9n\u00e9rateur Schema' : 'Schema Generator',
+      description: lang === 'fr' ? 'Donn\u00e9es structur\u00e9es JSON-LD' : 'JSON-LD structured data',
+      href: withBase(lang === 'fr' ? '/fr/outils-gratuits/generateur-schema' : '/free-tools/schema-generator'),
+    },
+  ];
 
   const resourcesDropdownItems = [
     {
@@ -56,13 +81,6 @@ export const Header = ({ lang, content }: HeaderProps) => {
       description: lang === 'fr' ? 'Articles et conseils SEO' : 'SEO articles and tips',
       href: 'https://blog.askingfranklin.com/',
       external: true,
-    },
-    {
-      icon: Search,
-      title: 'Google Suggests',
-      description: lang === 'fr' ? 'Explorez les suggestions Google gratuitement' : 'Explore Google suggestions for free',
-      href: freeToolsUrl,
-      external: false,
     },
   ];
 
@@ -112,6 +130,33 @@ export const Header = ({ lang, content }: HeaderProps) => {
           <a href={pricingUrl} className="text-sm font-semibold text-foreground hover:text-primary transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all">
             {content.nav.pricing}
           </a>
+
+          {/* Free Tools Dropdown */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 text-sm font-semibold text-foreground hover:text-primary transition-colors">
+              {lang === 'fr' ? 'Outils Gratuits' : 'Free Tools'}
+              <ChevronDown className="h-3 w-3 dropdown-arrow" />
+            </button>
+
+            {/* Dropdown Panel */}
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-80 bg-background border border-border rounded-xl shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              {freeToolsDropdownItems.map((item) => (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="flex gap-3 p-3 rounded-lg hover:bg-secondary transition-colors"
+                >
+                  <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <item.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <span className="font-semibold text-foreground block">{item.title}</span>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
 
           {/* Resources Dropdown */}
           <div className="relative group">
@@ -202,6 +247,23 @@ export const Header = ({ lang, content }: HeaderProps) => {
             >
               {content.nav.pricing}
             </a>
+            {/* Mobile Free Tools Links */}
+            <div className="space-y-2">
+              <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                {lang === 'fr' ? 'Outils Gratuits' : 'Free Tools'}
+              </span>
+              {freeToolsDropdownItems.map((item) => (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-primary transition-colors pl-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <item.icon className="h-4 w-4 text-primary" />
+                  {item.title}
+                </a>
+              ))}
+            </div>
             {/* Mobile Resources Links */}
             <div className="space-y-2">
               <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">

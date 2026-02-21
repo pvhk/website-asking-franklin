@@ -28,6 +28,12 @@ export const urlMap: Record<string, Record<Language, string>> = {
   '/fr/politique-de-confidentialite': { en: '/privacy-policy', fr: '/fr/politique-de-confidentialite' },
   '/free-tools/google-suggests': { en: '/free-tools/google-suggests', fr: '/fr/outils-gratuits/google-suggests' },
   '/fr/outils-gratuits/google-suggests': { en: '/free-tools/google-suggests', fr: '/fr/outils-gratuits/google-suggests' },
+  '/free-tools/serp-preview': { en: '/free-tools/serp-preview', fr: '/fr/outils-gratuits/apercu-serp' },
+  '/fr/outils-gratuits/apercu-serp': { en: '/free-tools/serp-preview', fr: '/fr/outils-gratuits/apercu-serp' },
+  '/free-tools/word-counter': { en: '/free-tools/word-counter', fr: '/fr/outils-gratuits/compteur-de-mots' },
+  '/fr/outils-gratuits/compteur-de-mots': { en: '/free-tools/word-counter', fr: '/fr/outils-gratuits/compteur-de-mots' },
+  '/free-tools/schema-generator': { en: '/free-tools/schema-generator', fr: '/fr/outils-gratuits/generateur-schema' },
+  '/fr/outils-gratuits/generateur-schema': { en: '/free-tools/schema-generator', fr: '/fr/outils-gratuits/generateur-schema' },
 };
 
 export const getAlternateUrl = (currentPath: string, targetLang: Language): string => {

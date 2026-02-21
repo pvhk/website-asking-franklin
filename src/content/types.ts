@@ -93,11 +93,16 @@ export interface ComingSoonPage {
   faq?: { title: string; items: FAQItem[]; };
 }
 
+export interface FreeToolPage {
+  meta: { title: string; description: string };
+  title: string;
+  subtitle: string;
+  cta: { title: string; description: string; button: string };
+  faq: { title: string; items: FAQItem[] };
+}
+
 export interface FreeToolsContent {
-  googleSuggests: {
-    meta: { title: string; description: string };
-    title: string;
-    subtitle: string;
+  googleSuggests: FreeToolPage & {
     placeholder: string;
     languageLabel: string;
     countryLabel: string;
@@ -112,15 +117,35 @@ export interface FreeToolsContent {
       prepositions: string;
       related: string;
     };
-    cta: {
-      title: string;
-      description: string;
-      button: string;
-    };
-    faq: {
-      title: string;
-      items: FAQItem[];
-    };
+  };
+  serpPreview: FreeToolPage & {
+    titleLabel: string;
+    titlePlaceholder: string;
+    descriptionLabel: string;
+    descriptionPlaceholder: string;
+    urlLabel: string;
+    urlPlaceholder: string;
+    keywordLabel: string;
+    keywordPlaceholder: string;
+    desktopTab: string;
+    mobileTab: string;
+    checks: Record<string, string>;
+  };
+  wordCounter: FreeToolPage & {
+    placeholder: string;
+    keywordLabel: string;
+    keywordPlaceholder: string;
+    stats: Record<string, string>;
+    densityTitle: string;
+    readabilityTitle: string;
+    topKeywordsTitle: string;
+  };
+  schemaGenerator: FreeToolPage & {
+    schemaTypeLabel: string;
+    generateButton: string;
+    copyButton: string;
+    copiedMessage: string;
+    previewLabel: string;
   };
 }
 

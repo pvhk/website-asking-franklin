@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SerpPreviewTool } from '@/pages/_SerpPreviewTool';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'fr';
+const content = getContent(lang);
+const faqItems = content.freeTools.serpPreview.faq?.items || [];
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={content.freeTools.serpPreview.meta.title}
+  metaDescription={content.freeTools.serpPreview.meta.description}
+  currentPath="/fr/outils-gratuits/apercu-serp"
+  faqData={faqItems}
+  breadcrumbs={[
+    { name: 'Accueil', url: 'https://www.askingfranklin.com/fr' },
+    { name: 'Outils Gratuits' },
+    { name: 'Aperçu SERP' },
+  ]}
+>
+  <SerpPreviewTool lang={lang} content={content} client:load />
+</BaseLayout>
