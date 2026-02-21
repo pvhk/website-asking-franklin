@@ -26,6 +26,8 @@ export const urlMap: Record<string, Record<Language, string>> = {
   '/fr/mentions-legales': { en: '/legal-notice', fr: '/fr/mentions-legales' },
   '/privacy-policy': { en: '/privacy-policy', fr: '/fr/politique-de-confidentialite' },
   '/fr/politique-de-confidentialite': { en: '/privacy-policy', fr: '/fr/politique-de-confidentialite' },
+  '/free-tools/google-suggests': { en: '/free-tools/google-suggests', fr: '/fr/outils-gratuits/google-suggests' },
+  '/fr/outils-gratuits/google-suggests': { en: '/free-tools/google-suggests', fr: '/fr/outils-gratuits/google-suggests' },
 };
 
 export const getAlternateUrl = (currentPath: string, targetLang: Language): string => {

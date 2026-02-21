@@ -523,6 +523,61 @@ export const enContent: SiteContent = {
     },
   },
 
+  freeTools: {
+    googleSuggests: {
+      meta: {
+        title: 'Free Google Suggests Tool - Find Keywords People Search For | Asking Franklin',
+        description: 'Discover what people search for on Google with our free keyword suggestion tool. Get questions, comparisons, prepositions, and related searches for any keyword.',
+      },
+      title: 'Free Google Suggests Tool',
+      subtitle: 'Discover what people are searching for on Google. Enter a keyword and get hundreds of search suggestions grouped by questions, comparisons, and more.',
+      placeholder: 'Enter a keyword (e.g. "content marketing")',
+      languageLabel: 'Language',
+      countryLabel: 'Country',
+      buttonLabel: 'Get Suggestions',
+      loadingLabel: 'Fetching suggestions...',
+      noResults: 'No suggestions found for this keyword. Try a different one.',
+      errorMessage: 'Something went wrong. Please try again in a moment.',
+      rateLimitMessage: 'Too many requests. Please wait a moment before trying again.',
+      sections: {
+        questions: 'Questions',
+        comparisons: 'Comparisons',
+        prepositions: 'Prepositions',
+        related: 'Related',
+      },
+      cta: {
+        title: 'Turn these keywords into SEO-optimized articles',
+        description: 'Asking Franklin analyzes search intent, your competitors, and writes content that ranks on Google and AI engines.',
+        button: 'Start your free trial',
+      },
+      faq: {
+        title: 'Frequently Asked Questions',
+        items: [
+          {
+            question: 'What is Google Suggests?',
+            answer: "Google Suggests (also called Google Autocomplete) is a feature that predicts what you're searching for as you type. Our tool queries Google's autocomplete for dozens of variations of your keyword to reveal what people are actually searching for.",
+          },
+          {
+            question: 'Is this tool really free?',
+            answer: 'Yes, this tool is 100% free with no account required. You can run up to 5 searches per minute.',
+          },
+          {
+            question: 'How can I use these suggestions for SEO?',
+            answer: 'Google Suggests reveals real user search queries. Use them to find long-tail keywords, understand search intent, create FAQ sections, plan blog content, and discover content gaps your competitors are missing.',
+          },
+          {
+            question: 'What languages and countries are supported?',
+            answer: 'Currently we support English and French suggestions, with results localized to the US, UK, Canada, Australia, France, Belgium, Switzerland, and Luxembourg.',
+          },
+          {
+            question: 'How fresh are the results?',
+            answer: "Results are cached for 24 hours to ensure fast response times. Google Autocomplete data updates regularly, so you'll always see recent trends.",
+          },
+        ],
+      },
+    },
+  },
+
   terms: {
     meta: {
       title: 'Terms of Sale - Asking Franklin | AI SEO Assistant',
@@ -679,6 +734,7 @@ export const enContent: SiteContent = {
         items: [
           { label: 'Home', href: '/' },
           { label: 'Pricing', href: '/pricing' },
+          { label: 'Free Tools', href: '/free-tools/google-suggests' },
           { label: 'Knowledge Base', href: '/knowledge-base' },
           { label: 'Blog', href: 'https://blog.askingfranklin.com/en/' },
         ],

@@ -93,6 +93,37 @@ export interface ComingSoonPage {
   faq?: { title: string; items: FAQItem[]; };
 }
 
+export interface FreeToolsContent {
+  googleSuggests: {
+    meta: { title: string; description: string };
+    title: string;
+    subtitle: string;
+    placeholder: string;
+    languageLabel: string;
+    countryLabel: string;
+    buttonLabel: string;
+    loadingLabel: string;
+    noResults: string;
+    errorMessage: string;
+    rateLimitMessage: string;
+    sections: {
+      questions: string;
+      comparisons: string;
+      prepositions: string;
+      related: string;
+    };
+    cta: {
+      title: string;
+      description: string;
+      button: string;
+    };
+    faq: {
+      title: string;
+      items: FAQItem[];
+    };
+  };
+}
+
 export interface SiteContent {
   siteName: string;
   siteDescription: string;
@@ -139,6 +170,7 @@ export interface SiteContent {
     subtitle: string;
     articles: KnowledgeArticle[];
   };
+  freeTools: FreeToolsContent;
   terms: { meta: { title: string; description: string; }; title: string; intro?: string; sections: LegalSection[]; };
   legalNotice: { meta: { title: string; description: string; }; title: string; intro?: string; sections: LegalSection[]; };
   privacyPolicy: { meta: { title: string; description: string; }; title: string; intro?: string; sections: LegalSection[]; };

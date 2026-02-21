@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import type { Language } from '@/lib/i18n';
 import type { SiteContent } from '@/content/types';
-import { Menu, X, ChevronDown, Sparkles, Zap, BookOpen, FileText, PenTool, BarChart3, Rocket } from 'lucide-react';
+import { Menu, X, ChevronDown, Sparkles, Zap, BookOpen, FileText, PenTool, BarChart3, Rocket, Search } from 'lucide-react';
 import { useState } from 'react';
 import { withBase, withBaseImage } from '@/lib/baseUrl';
 
@@ -40,6 +40,8 @@ export const Header = ({ lang, content }: HeaderProps) => {
     },
   ];
 
+  const freeToolsUrl = withBase(lang === 'fr' ? '/fr/outils-gratuits/google-suggests' : '/free-tools/google-suggests');
+
   const resourcesDropdownItems = [
     {
       icon: BookOpen,
@@ -54,6 +56,13 @@ export const Header = ({ lang, content }: HeaderProps) => {
       description: lang === 'fr' ? 'Articles et conseils SEO' : 'SEO articles and tips',
       href: 'https://blog.askingfranklin.com/',
       external: true,
+    },
+    {
+      icon: Search,
+      title: 'Google Suggests',
+      description: lang === 'fr' ? 'Explorez les suggestions Google gratuitement' : 'Explore Google suggestions for free',
+      href: freeToolsUrl,
+      external: false,
     },
   ];
 

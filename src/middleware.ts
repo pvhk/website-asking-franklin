@@ -53,7 +53,9 @@ function getCurrentLanguageFromPath(pathname: string): Language | null {
     pathname.startsWith('/terms') ||
     pathname.startsWith('/legal-notice') ||
     pathname.startsWith('/privacy-policy') ||
-    pathname.startsWith('/knowledge-base')
+    pathname.startsWith('/knowledge-base') ||
+    pathname.startsWith('/free-tools') ||
+    pathname.startsWith('/features')
   ) {
     return 'en';
   }

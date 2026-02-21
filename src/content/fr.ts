@@ -537,6 +537,61 @@ export const frContent: SiteContent = {
     },
   },
 
+  freeTools: {
+    googleSuggests: {
+      meta: {
+        title: 'Outil Google Suggests Gratuit - Trouvez les mots-cl\u00e9s recherch\u00e9s | Asking Franklin',
+        description: 'D\u00e9couvrez ce que les internautes recherchent sur Google avec notre outil gratuit de suggestions de mots-cl\u00e9s. Questions, comparaisons, pr\u00e9positions et recherches associ\u00e9es.',
+      },
+      title: 'Outil Google Suggests Gratuit',
+      subtitle: 'D\u00e9couvrez ce que les internautes recherchent sur Google. Entrez un mot-cl\u00e9 et obtenez des centaines de suggestions regroup\u00e9es par questions, comparaisons et plus.',
+      placeholder: 'Entrez un mot-cl\u00e9 (ex: "marketing de contenu")',
+      languageLabel: 'Langue',
+      countryLabel: 'Pays',
+      buttonLabel: 'Obtenir les suggestions',
+      loadingLabel: 'Recherche en cours...',
+      noResults: 'Aucune suggestion trouv\u00e9e pour ce mot-cl\u00e9. Essayez un autre mot-cl\u00e9.',
+      errorMessage: 'Une erreur est survenue. Veuillez r\u00e9essayer dans un instant.',
+      rateLimitMessage: 'Trop de requ\u00eates. Veuillez patienter avant de r\u00e9essayer.',
+      sections: {
+        questions: 'Questions',
+        comparisons: 'Comparaisons',
+        prepositions: 'Pr\u00e9positions',
+        related: 'Recherches associ\u00e9es',
+      },
+      cta: {
+        title: 'Transformez ces mots-cl\u00e9s en articles optimis\u00e9s SEO',
+        description: "Asking Franklin analyse l'intention de recherche, vos concurrents, et r\u00e9dige du contenu qui se positionne sur Google et les moteurs IA.",
+        button: "D\u00e9marrer l'essai gratuit",
+      },
+      faq: {
+        title: 'Questions fr\u00e9quentes',
+        items: [
+          {
+            question: "Qu'est-ce que Google Suggests ?",
+            answer: "Google Suggests (ou Google Autocomplete) est une fonctionnalit\u00e9 qui pr\u00e9dit ce que vous recherchez pendant que vous tapez. Notre outil interroge l'autocompl\u00e9tion de Google pour des dizaines de variations de votre mot-cl\u00e9 afin de r\u00e9v\u00e9ler ce que les internautes recherchent r\u00e9ellement.",
+          },
+          {
+            question: 'Cet outil est-il vraiment gratuit ?',
+            answer: "Oui, cet outil est 100% gratuit et ne n\u00e9cessite aucun compte. Vous pouvez effectuer jusqu'\u00e0 5 recherches par minute.",
+          },
+          {
+            question: 'Comment utiliser ces suggestions pour le SEO ?',
+            answer: "Google Suggests r\u00e9v\u00e8le les vraies requ\u00eates des utilisateurs. Utilisez-les pour trouver des mots-cl\u00e9s longue tra\u00eene, comprendre l'intention de recherche, cr\u00e9er des sections FAQ, planifier du contenu de blog et d\u00e9couvrir les lacunes de contenu de vos concurrents.",
+          },
+          {
+            question: 'Quelles langues et pays sont support\u00e9s ?',
+            answer: "Nous supportons actuellement les suggestions en anglais et en fran\u00e7ais, avec des r\u00e9sultats localis\u00e9s pour les \u00c9tats-Unis, le Royaume-Uni, le Canada, l'Australie, la France, la Belgique, la Suisse et le Luxembourg.",
+          },
+          {
+            question: 'Les r\u00e9sultats sont-ils \u00e0 jour ?',
+            answer: "Les r\u00e9sultats sont mis en cache pendant 24 heures pour garantir des temps de r\u00e9ponse rapides. Les donn\u00e9es d'autocompl\u00e9tion Google sont r\u00e9guli\u00e8rement mises \u00e0 jour, vous verrez donc toujours les tendances r\u00e9centes.",
+          },
+        ],
+      },
+    },
+  },
+
   terms: {
     meta: {
       title: 'CGV - Conditions Générales de Vente | Asking Franklin',
@@ -693,6 +748,7 @@ export const frContent: SiteContent = {
         items: [
             { label: 'Accueil', href: '/fr' },
             { label: 'Tarifs', href: '/fr/tarifs' },
+            { label: 'Outils Gratuits', href: '/fr/outils-gratuits/google-suggests' },
             { label: 'Knowledge Base', href: '/fr/base-de-connaissances' },
             { label: 'Blog', href: 'https://blog.askingfranklin.com/' },
         ],

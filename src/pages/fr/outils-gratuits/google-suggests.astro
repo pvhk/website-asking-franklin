@@ -1,0 +1,24 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { GoogleSuggestsTool } from '@/pages/_GoogleSuggestsTool';
+import { getContent } from '@/lib/i18n';
+
+const lang = 'fr';
+const content = getContent(lang);
+const faqItems = content.freeTools.googleSuggests.faq?.items || [];
+---
+
+<BaseLayout
+  lang={lang}
+  metaTitle={content.freeTools.googleSuggests.meta.title}
+  metaDescription={content.freeTools.googleSuggests.meta.description}
+  currentPath="/fr/outils-gratuits/google-suggests"
+  faqData={faqItems}
+  breadcrumbs={[
+    { name: 'Accueil', url: 'https://www.askingfranklin.com/fr' },
+    { name: 'Outils Gratuits' },
+    { name: 'Google Suggests' },
+  ]}
+>
+  <GoogleSuggestsTool lang={lang} content={content} client:load />
+</BaseLayout>
